@@ -1,0 +1,93 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  overflow-x: hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+body > .container {
+  padding: 0px 50px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+#hero {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    background-image: url("../images/golden_gate.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#hero-container {
+    position: relative;
+    width: 800px;
+    top: calc(50% - (164px / 2));
+    left: calc(50% - (800px / 2));
+    text-align: center;
+}
+
+#hero-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    height: 100%;
+    width: 100%;
+}
+
+#hero-contact {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+.hero-box#name {
+    font-size: 4em;
+    margin-bottom: 40px;
+    text-shadow: #333 1px 2px;
+    font-weight: 600;
+    color: #EDEDED;
+}
+
+.hero-box#description {
+    font-size: 2.5em;
+    margin: 0 auto;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 5px #000;
+    font-weight: 600;
+}
+
+.hero-box {
+    color: #DDD;}
+
