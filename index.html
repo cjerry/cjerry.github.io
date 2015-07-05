@@ -27,7 +27,7 @@
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,15 +44,13 @@
             <li><a class="page-scroll" href="#experience">Experience</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Links<span class="caret"></span>
+              </a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li>
+                  <a href="./assets/files/Jerry-Chen-Resume.pdf"><span class="glyphicon glyphicon-file"aria-hidden="true"/>Resume</a>
+                </li>
               </ul>
             </li>
           </ul>
@@ -73,21 +71,22 @@
           Jerry Chen
         </div>
         <div class="hero-box" id="description">
-          Lorem ipsum
+          Rising computer scientist obsessed with quality.
         </div>
       </div>
     </div>
     <div class="background">
-      <div class="container">
-        <div id="about" class="article-section">
+        <div id="about" class="article-section container">
           <h1>About</h1>
-          <h4>
-            My name is Jerry Chen, and I am a second year undergraduate
-            studying electrical engineering and computer science at the
+          <h3>
+            My name is Jerry Chen, and I am a undergraduate studying
+            electrical engineering and computer science at the
             University of California, Berkeley.
-          </h4>
+          </h3>
         </div>
-        <div id="experience" class="article-section">
+        <div id="experience" class="article-section container">
+          <div class="background-image"></div>
+          <span class="blur-guard">
           <h1>Experience</h1>
           <h4>
             I'm always looking for new skills to learn.
@@ -95,9 +94,54 @@
             Here's what I can do.
           <h4>
           <h2>Classwork</h2>
-          <h2>Projects</h2>
+          <span class="info-line">
+            <b>Computer Science:</b> Structure and Interpretation of Computer Programs,
+            Data Structures, Discrete Math.
+          </span>
+          <span class="info-line">
+            Other: Vector and Multivariable Calculus, Linear Algebra.
+          </span>
+          <h2>Project Showcase</h2>
+          <!-- Projects box -->
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <p>...</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <p>...</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <img src="..." alt="...">
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <p>...</p>
+                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <span>
         </div>
-        <div id="contact" class="article-section">
+        <div id="contact" class="article-section container">
           <h1>Contact</h1>
           <h4>
             The best way to reach me would be through
@@ -107,14 +151,15 @@
             and <a href="https://www.github.com/cjerry">GitHub</a>.
           </h4>
           </h4>
-
         </div>
-      </div>
     </div>
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <p class="text-muted">
-          Designed by Jerry Chen. Website source available on
+          Designed by Jerry Chen with lots of love from
+          <a href="http://getbootstrap.com">Bootstrap</a>.
+          Website source available on
           <a href="https://github.com/cjerry/jerryjrchen">GitHub</a>.
         </p>
       </div>
