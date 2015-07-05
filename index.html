@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Jerry Chen's website.">
     <meta name="author" content="Jerry Chen">
-    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
 
     <title>Jerry Chen</title>
 
@@ -15,7 +15,7 @@
 
     <!-- Custom CSS -->
     <link href="./assets/css/style.css" rel="stylesheet">
-    <link href="./assets/css/scrolling-nav.css" rel="stylesheet">
+    <link href="./assets/css/scrolling-nav.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,7 +25,6 @@
   </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
@@ -36,13 +35,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand page-scroll" href="#page-top">Jerry Chen</a>
+          <a class="navbar-brand page-scroll" href="#page-top">jerryjrchen</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a class="page-scroll" href="#about">About</a></li>
             <li><a class="page-scroll" href="#experience">Experience</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                 role="button" aria-haspopup="true" aria-expanded="false">
@@ -51,7 +52,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="./assets/files/Jerry-Chen-Resume.pdf">
+                  <a href="./assets/files/Jerry-Chen-Resume-R.pdf">
                     <span class="glyphicon glyphicon-file"aria-hidden="true"/> 
                       Resume
                   </a>
@@ -64,16 +65,15 @@
               </ul>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div><!--/.nav-collapse-->
       </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Image -->
     <div id="hero">
       <div id="hero-cover"> </div>
     </div>
 
-    <!-- Begin page content -->
     <!-- Hero text -->
     <div id="hero-container">
       <div class="hero-items">
@@ -81,7 +81,7 @@
           Jerry Chen
         </div>
         <div class="hero-box" id="description">
-          Rising <span class="emph">detail-obsessed</span> computer scientist.
+          Rising <span class="emph">quality-driven</span> computer scientist.
         </div>
         <div id="social-links">
           <a href="https://www.github.com/cjerry">
@@ -97,8 +97,9 @@
       </div>
     </div>
 
-    <!-- Content -->
-    <div class="background">
+
+    <!-- Begin page content -->
+    <div class="content">
         <div id="about" class="article-section container">
           <h1>About</h1>
           <h3>
@@ -123,6 +124,8 @@
             Most recently, I've picked up web design and created this website!
             Here's what I can do.
           <h4>
+
+          <!-- Skill/Class tables -->
           <ul class="list-group col-md-6">
             <li class="list-group-item active">Coursework</li>
             <li class="list-group-item">Data Structures</li>
@@ -132,6 +135,8 @@
             <li class="list-group-item">Discrete Mathematics</li>
             <li class="list-group-item">Structure and Interpretation of Computer
             Programs</li>
+            <li class="list-group-item">Designing Information Devices and
+              Systems (EE)</li>
             <li class="list-group-item">Vector and Multivariable Calculus</li>
             <li class="list-group-item">Linear Algebra</li>
           </ul>
@@ -142,19 +147,27 @@
             <li class="list-group-item">Java</li>
             <li class="list-group-item">Scheme (functional language)</li>
             <li class="list-group-item">HTML5/CSS3/Javascript</li>
+            <li class="list-group-item">Version Control (Git, Mercurial)</li>
             <li class="list-group-item">SQLite</li>
             <li class="list-group-item">Vim!</li>
           </ul>
+
           <!-- Projects box -->
           <h2>Selected Projects</h2>
           <div id="proj-box">
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <img src="..." alt="...">
+                  <div class="image-limit">
+                  <img src="./assets/images/jerryjrchen200.png" alt="..."/>
+                  </div>
                   <div class="caption">
                     <h3>jerryjrchen</h3>
                     <p>Personal portfolio website (that you are looking at).<p>
+                    <p>
+                    I faced many challenges in cobbling together this website,
+                    but I learned tons about the hidden secrets of web design.
+                    </p>
                     <p><b>Current Version:</b> July 2015.</p>
                     <p>
                     <b>Tech:</b> HTML, CSS, JavaScript (JQuery library).
@@ -162,13 +175,14 @@
                     </p>
                     <a href="https://github.com/cjerry/jerryjrchen" class="btn
                       btn-primary" role="button">GitHub</a>
-                    <p></p>
                   </div>
                 </div>
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
+                  <div class="image-limit">
                   <img src="./assets/images/gitlet.png" alt="...">
+                  </div>
                   <div class="caption">
                     <h3>Gitlet</h3>
                     <p>
@@ -192,27 +206,32 @@
               </div>
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
+                  <div class="image-limit">
                   <img src="./assets/images/matrixmultithread.png" alt="...">
+                  </div>
                   <div class="caption">
                     <h3>Matrix Multithread</h3>
                     <p>
-                    My 2012 science fair project.
-                    Matrix multiplication optimization through
-                    multithreading.
+                    My 2012 science fair project, Matrix multiplication
+                    optimization through multithreading.
                     </p>
                     <p>
+                    I compared multi versus single threading performance, and
+                    examined the overhead cost of distributing jobs through
+                    multicore processing.
+                    </p>
                     <p><b>Completed:</b> January 2012.</p>
                     <p><b>Tech:</b> Java.</p>
                     <a href="https://github.com/cjerry/MatrixMultiThread"
                       class="btn btn-primary" role="button">GitHub</a>
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <span> <!--/blur-guard -->
+          <span> <!--/.blur-guard-->
         </div>
+
 
         <div id="contact" class="article-section container">
           <h1>Contact</h1>
@@ -224,11 +243,12 @@
             and <a href="https://www.github.com/cjerry">GitHub</a>.
           </h4>
           <h4>
-            My resume is <a href="./assets/files/Jerry-Chen-Resume.pdf">
+            My resume is <a href="./assets/files/Jerry-Chen-Resume-R.pdf">
               available here</a>.
           </h4>
         </div>
-    </div>
+    </div> <!--/.content-->
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -249,15 +269,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
-
     <!-- jQuery -->
     <script src="./assets/js/jquery.js"></script>
-
     <!-- Scrolling Nav JavaScript -->
     <script src="./assets/js/jquery.easing.min.js"></script>
     <script src="./assets/js/scrolling-nav.js"></script>
+
 
   </body>
 </html>

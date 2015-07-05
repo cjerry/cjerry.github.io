@@ -21,8 +21,8 @@ body {
 
 /* Custom page CSS
 -------------------------------------------------- */
-body > .background {
-    background: white;
+body > .content {
+    background: red; /* If you see this, something has gone wrong. */
 }
 
 body > .container {
@@ -76,10 +76,9 @@ code {
     padding-top: calc(50vh - 170px / 2);
 }
 
-@media (max-width:767px)
-{
+@media (max-width:767px) {
     .hero-items {
-        padding-top: calc(35vh - 170px / 2);
+        padding-top: calc(40vh - 170px / 2);
     }
 }
 
@@ -87,7 +86,7 @@ code {
     font-size: 4em;
     margin-bottom: 20px;
     text-shadow: #333 1px 2px;
-    font-weight: 600;
+    font-weight: 300;
     color: #EDEDED;
 }
 
@@ -95,21 +94,21 @@ code {
     font-size: 2.5em;
     margin: 0 auto;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 5px #000;
-    font-weight: 600;
+    font-weight: 200;
 }
 
 .hero-box {
     color: #DDD;}
 
 .article-section {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 100px;
     text-align: center;
     background: #fff;
 }
 
 .emph {
-    color: #136BBC;
+    color: #7D8900;
 }
 
 .fade {
@@ -137,6 +136,7 @@ code {
     font-size: 54px;
     color: white;
     top: 0px;
+    line-height: 50px;
 }
 #about {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/sather1.jpg");
@@ -157,21 +157,20 @@ code {
 
 .background-image {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/editor-ception.png");
-    background-position: 15% 10%;
-    -webkit-filter: blur(2px);
+    background-position: 40% 0%;
+    -webkit-filter: blur(3px);
     -webkit-transform: scale(1.1);
-    -moz-filter: blur(2px);
+    -moz-filter: blur(3px);
     -moz-transform: scale(1.1);
-    -o-filter: blur(2px);
+    -o-filter: blur(3px);
     -o-transform: scale(1.1);
-    filter: blur(2px);
+    filter: blur(3px);
     transform: scale(1.1);
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    overflow: auto;
 }
 
 .blur-guard {
@@ -187,6 +186,28 @@ code {
     text-align:left;
 }
 
+.thumbnail .btn {
+    left: calc(50% - 70.3438px / 2);
+    bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+.thumbnail .image-limit {
+    overflow: hidden;
+    max-height: 200px;
+}
+
+.image-limit img {
+    max-width: 100%;
+}
+
+.caption > h3 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
 #contact {
     background: #003A70;
     border-width: 1px 0px;
@@ -198,9 +219,8 @@ code {
     color: #719CF9;
 }
 
-@media (max-width:660px)
-{
+@media (max-width:660px) {
     .footer {
-        height:80px;
+        height: 100px;
     }
 }

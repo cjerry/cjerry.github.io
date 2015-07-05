@@ -6,9 +6,9 @@
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -webkit-transition: background .5s cubic-bezier(0.68, -0.55, 0.27, 1.55),padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-out,padding .5s ease-out;
     
     }
 
