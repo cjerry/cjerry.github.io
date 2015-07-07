@@ -23,7 +23,7 @@ $(function() {
            }
            if (lastScrollHeight - curTop > 0) {
                // Scrolled up.
-               $(".navbar").stop().animate({ "marginTop" : "0px" }, 20);
+               $(".navbar").stop().animate({ "marginTop" : "0px" }, 30);
                if (curTop != 0) {
                    $(".navbar").css("padding", "0");
                } else {
