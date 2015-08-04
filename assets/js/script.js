@@ -1,18 +1,4 @@
-// Make the project boxes equal height.
-function boxHeight(group) {
-    var tallest = 0;
-    group.each(function() {
-        var thisHeight = $(this).height();
-        if(thisHeight > tallest) {
-            tallest = thisHeight;
-        }
-    });
-    // Inject extra height into the short items.
-    group.each(function() { $(this).height(tallest); });
-}
-
 $(function() {
-    boxHeight($(".thumbnail"));
     if ($(window).width() > 768) {
         var lastScrollHeight = 0;
         var lastSwitchHeight = 0;
