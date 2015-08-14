@@ -22,7 +22,7 @@ body {
 /* Custom page CSS
 -------------------------------------------------- */
 body > .content {
-    background: red; /* If you see this, something has gone wrong. */
+    background: #000; /* If you see this, something has gone wrong. */
 }
 
 body > .container {
@@ -67,7 +67,7 @@ code {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.60);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
 }
@@ -83,9 +83,9 @@ code {
 }
 
 .hero-box#name {
-    font-size: 4em;
+    font-size: 6em;
     margin-bottom: 20px;
-    text-shadow: #333 1px 2px;
+    text-shadow: #333 1px 1px;
     font-weight: 300;
     color: #EDEDED;
 }
@@ -105,10 +105,13 @@ code {
     padding-top: 100px;
     text-align: center;
     background: #fff;
+    border-width: 1px 0px 0px;
+    border-color: #000;
+    border-style: solid;
 }
 
 .emph {
-    color: #7D8900;
+    color: rgb(227, 247, 1);
 }
 
 .fade {
@@ -139,24 +142,18 @@ code {
     line-height: 50px;
 }
 #about {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/sather1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/sather1.jpg");
     background-position: 30% 0%;
-    border-width: 1px 0px 0px;
-    border-color: #444;
-    border-style: solid;
 }
 
 #experience {
     position: relative;
-    border-width: 1px 0px;
-    border-color: #444;
-    border-style: solid;
     height: 100%;
     overflow: hidden;
 }
 
 .background-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/editor-ception.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/editor-ception.png");
     background-position: 40% 0%;
     -webkit-filter: blur(3px);
     -webkit-transform: scale(1.1);
@@ -182,8 +179,18 @@ code {
     position: relative;
 }
 
+#skills {
+    margin-bottom: 50px;
+    overflow: auto;
+}
+
+#coursework {
+    background-color: #8E1F1F;
+    border-color: #8E1F1F;
+}
+
 .thumbnail p {
-    text-align:left;
+    text-align: left;
 }
 
 .thumbnail .btn {
@@ -205,22 +212,15 @@ code {
 
 .caption > h3 {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 2em;
 }
 
 #contact {
     background: #003A70;
-    border-width: 1px 0px;
-    border-color: #444;
-    border-style: solid;
 }
 
 #contact a {
-    color: #719CF9;
-}
-
-@media (max-width:660px) {
-    .footer {
-        height: 100px;
-    }
+    color: #7BA1F5;
+    text-decoration: underline;
 }
