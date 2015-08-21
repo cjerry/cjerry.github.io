@@ -153,8 +153,8 @@ code {
 }
 
 .background-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/editor-ception.png");
-    background-position: 40% 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/editor-ception.png");
+    background-position: 3% 0%;
     -webkit-filter: blur(3px);
     -webkit-transform: scale(1.1);
     -moz-filter: blur(3px);
