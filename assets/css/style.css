@@ -142,7 +142,7 @@ code {
     line-height: 50px;
 }
 #about {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/sather1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/sather1.jpg");
     background-position: 30% 0%;
 }
 
@@ -203,7 +203,8 @@ code {
 
 .thumbnail .image-limit {
     overflow: hidden;
-    max-height: 200px;
+    /* max-height: 200px; */
+    height: 200px;
 }
 
 .image-limit img {
