@@ -196,11 +196,13 @@ code {
 }
 
 .thumbnail .btn {
-    left: calc(50% - 70.3438px / 2);
-    bottom: 5px;
+    /* left: calc(50% - 70.3438px / 2); */
+    left: 5%;
+    bottom: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
     position: absolute;
+    width: 90%;
 }
 
 .thumbnail .image-limit {
