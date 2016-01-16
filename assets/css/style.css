@@ -187,8 +187,13 @@ code {
 }
 
 #coursework {
-    background-color: #8E1F1F;
-    border-color: #8E1F1F;
+    background-color: #3c763d;
+    border-color: #3c763d;
+}
+
+#inprog {
+    background-color: #8a6d3b;
+    border-color: #8a6d3b;
 }
 
 .thumbnail p {
