@@ -142,6 +142,7 @@ code {
     top: 0px;
     line-height: 50px;
 }
+
 #about {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/sather1.jpg");
     background-position: 30% 0%;
@@ -231,6 +232,22 @@ code {
 }
 
 #contact a {
+    color: #7BA1F5;
+    text-decoration: underline;
+}
+
+#ta {
+    min-height: calc(100vh - 60px);
+    background: #003A70;
+    text-align: left;
+}
+
+#ta ul {
+    color: inherit;
+    list-style-type: none;
+}
+
+#ta a {
     color: #7BA1F5;
     text-decoration: underline;
 }
