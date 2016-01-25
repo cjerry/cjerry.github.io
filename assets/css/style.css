@@ -248,7 +248,24 @@ code {
     list-style-type: none;
 }
 
+#ta .table {
+    font-size: 20px;
+}
+
+.table-inverse {
+    color: #eceeef;
+    background-color: #373a3c;
+}
+
 #ta a {
     color: #7BA1F5;
     text-decoration: underline;
+}
+
+#ta .table>thead>tr>th {
+    border-bottom: 4px solid #ddd;
+}
+
+.table-title {
+    margin-bottom: 0px;
 }
