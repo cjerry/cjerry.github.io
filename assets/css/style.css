@@ -271,8 +271,7 @@ code {
 }
 
 #ta .jumbotron {
-    display: inline-block;
     color: #000000;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
 }
