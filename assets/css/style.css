@@ -269,3 +269,10 @@ code {
 .table-title {
     margin-bottom: 0px;
 }
+
+#ta .jumbotron {
+    display: inline-block;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+}
