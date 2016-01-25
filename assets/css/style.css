@@ -244,6 +244,7 @@ code {
 
 #ta ul {
     color: inherit;
+    font-size: 20px;
     list-style-type: none;
 }
 
