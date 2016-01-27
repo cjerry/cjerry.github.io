@@ -128,6 +128,7 @@ code {
     height: 50px;
 }
 
+/* Delete? */
 .social {
     margin: 0px 20px;
     height: 50px;
@@ -137,10 +138,7 @@ code {
 
 .social-glyph {
     margin: 0px 20px;
-    font-size: 54px;
     color: white;
-    top: 0px;
-    line-height: 50px;
 }
 
 #about {
