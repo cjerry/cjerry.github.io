@@ -234,19 +234,19 @@ code {
     text-decoration: underline;
 }
 
-#ta {
+.ta {
     min-height: calc(100vh - 60px);
     background: #003A70;
     text-align: left;
 }
 
-#ta ul {
+.ta ul {
     color: inherit;
     font-size: 20px;
     list-style-type: none;
 }
 
-#ta .table {
+.ta .table {
     font-size: 20px;
 }
 
@@ -255,12 +255,12 @@ code {
     background-color: #373a3c;
 }
 
-#ta a {
+.ta a {
     color: #7BA1F5;
     text-decoration: underline;
 }
 
-#ta .table>thead>tr>th {
+.ta .table>thead>tr>th {
     border-bottom: 4px solid #ddd;
 }
 
@@ -268,8 +268,13 @@ code {
     margin-bottom: 0px;
 }
 
-#ta .jumbotron {
+.ta .jumbotron {
     color: #000000;
     padding: 20px;
     margin-bottom: 10px;
+}
+
+.btn a {
+    color: inherit;
+    text-decoration: none;
 }
