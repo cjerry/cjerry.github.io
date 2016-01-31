@@ -273,3 +273,8 @@ code {
     color: inherit;
     text-decoration: none;
 }
+
+#ta-section {
+    max-width: 650px;
+    margin: 0 auto;
+}
