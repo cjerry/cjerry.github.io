@@ -269,12 +269,12 @@ code {
     margin-bottom: 10px;
 }
 
-.btn a {
-    color: inherit;
-    text-decoration: none;
-}
-
 #ta-section {
     max-width: 650px;
     margin: 0 auto;
 }
+
+.ta .btn {
+    min-width: 70px;
+}
+
