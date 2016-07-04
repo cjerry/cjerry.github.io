@@ -15,8 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.3.6",
-    "components-font-awesome": "^4.6.3",
-    "jquery": "~1.9.1"
+    "bootstrap-sass": "git@github.com:embats/bootstrap-sass.git",
+    "components-font-awesome": "^4.6.3"
   }
 }

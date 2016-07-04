@@ -1,11 +1,18 @@
 # Changelog
 
+## 3.3.7
+
+* Limits jQuery dependency to 1.9.1 - 2 to avoid incompatibilities with bootstrap js
+* Bumps dev-dependencies to "node-sass": "~3.7.0", "mincer": "~1.4.0", "ejs": "~2.4.2"
+* Pins rake version to ~> 10.5.0 for sass 3.3 gemfile: [sass/sass#2016](https://github.com/sass/sass/pull/2015)
+* Adds style field to package.json [#1045](https://github.com/twbs/bootstrap-sass/issues/1045)
+
 ## 3.3.6
 
-Bumps Sass dependency to 3.3.4+ to avoid compatibility issues with @at-root.
-Bumps node-sass dependency to ~3.4.2 for Node.js v5 compatibility. [#986](https://github.com/twbs/bootstrap-sass/issues/986)
-Fixes breadcrumb content issues on libsass. [#919](https://github.com/twbs/bootstrap-sass/issues/919)
-Fixes a Rails 5 compatibility issue. [#965](https://github.com/twbs/bootstrap-sass/pull/965)
+* Bumps Sass dependency to 3.3.4+ to avoid compatibility issues with @at-root.
+* Bumps node-sass dependency to ~3.4.2 for Node.js v5 compatibility. [#986](https://github.com/twbs/bootstrap-sass/issues/986)
+* Fixes breadcrumb content issues on libsass. [#919](https://github.com/twbs/bootstrap-sass/issues/919)
+* Fixes a Rails 5 compatibility issue. [#965](https://github.com/twbs/bootstrap-sass/pull/965)
 
 Framework version: Bootstrap **v3.3.6**
 
