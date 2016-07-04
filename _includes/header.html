@@ -4,10 +4,16 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">{{ site.title }}</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
 
-    <div class="collapse navbar-collapse navbar-right">
-      <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse" id="navbar-top">
+      <ul class="nav navbar-nav navbar-right">
         {% for page in site.pages %}
           {% if page.category == "personal" %}
           <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
