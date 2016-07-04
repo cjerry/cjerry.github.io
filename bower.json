@@ -1,0 +1,22 @@
+{
+  "name": "jerryjrchen",
+  "homepage": "https://github.com/cjerry/cjerry.github.io",
+  "authors": [
+    "Jerry Chen <jerry.c@berkeley.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "components-font-awesome": "^4.6.3",
+    "jquery": "~1.9.1"
+  }
+}

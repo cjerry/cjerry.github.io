@@ -1,0 +1,282 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  overflow-x: hidden;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 60px;
+  background-color: #222222;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+body > .content {
+    background: #003A70;
+}
+
+body > .container {
+  padding: 0px 50px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+#hero {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background-image: url("/assets/images/golden_gate.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+#hero-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+
+#hero-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+}
+
+.hero-items {
+    padding-top: calc(50vh - 170px / 2);
+}
+
+@media (max-width:767px) {
+    .hero-items {
+        padding-top: calc(40vh - 170px / 2);
+    }
+}
+
+.hero-box#name {
+    font-size: 6em;
+    margin-bottom: 20px;
+    text-shadow: #333 1px 1px;
+    font-weight: 300;
+    color: #EDEDED;
+}
+
+.hero-box#description {
+    font-size: 2.5em;
+    margin: 0 auto;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 5px #000;
+    font-weight: 200;
+}
+
+.hero-box {
+    color: #DDD;}
+
+.article-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    border-width: 1px 0px 0px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.emph {
+    color: rgb(227, 247, 1);
+}
+
+.fade {
+    opacity: 1;
+}
+
+.fade:hover {
+    opacity: 0.5;
+}
+
+#social-links {
+    margin-top: 60px;
+    height: 50px;
+}
+
+/* Delete? */
+.social {
+    margin: 0px 20px;
+    height: 50px;
+    width: auto;
+    vertical-align: top;
+}
+
+.social-glyph {
+    margin: 0px 20px;
+    color: white;
+}
+
+#about {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/assets/images/sather1.jpg");
+    background-position: 30% 0%;
+    /* min-height: 0px; */
+}
+
+#experience {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/images/editor-ception.png");
+    background-position: 3% 0%;
+    -webkit-filter: blur(3px);
+    -webkit-transform: scale(1.1);
+    -moz-filter: blur(3px);
+    -moz-transform: scale(1.1);
+    -o-filter: blur(3px);
+    -o-transform: scale(1.1);
+    filter: blur(3px);
+    transform: scale(1.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.blur-guard {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
+    z-index: 1;
+    position: relative;
+}
+
+#skills {
+    margin-bottom: 50px;
+    overflow: auto;
+}
+
+#coursework {
+    background-color: #3c763d;
+    border-color: #3c763d;
+}
+
+#inprog {
+    background-color: #8a6d3b;
+    border-color: #8a6d3b;
+}
+
+.thumbnail p {
+    text-align: left;
+}
+
+.thumbnail .btn {
+    /* left: calc(50% - 70.3438px / 2); */
+    left: 5%;
+    bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 90%;
+}
+
+.thumbnail .image-limit {
+    overflow: hidden;
+    /* max-height: 200px; */
+    height: 200px;
+}
+
+.image-limit img {
+    max-width: 100%;
+}
+
+.caption > h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#contact {
+    background: #003A70;
+}
+
+#contact a {
+    color: #7BA1F5;
+    text-decoration: underline;
+}
+
+.ta {
+    color: #fff;
+    min-height: calc(100vh - 60px);
+    text-align: left;
+}
+
+.ta ul {
+    color: inherit;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.ta .table {
+    font-size: 20px;
+}
+
+.table-inverse {
+    color: #eceeef;
+    background-color: #373a3c;
+}
+
+.ta .table>thead>tr>th {
+    border-bottom: 4px solid #ddd;
+}
+
+.table-title {
+    margin-bottom: 0px;
+}
+
+.ta .jumbotron {
+    color: #000000;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#ta-section {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.ta .btn {
+    min-width: 70px;
+}
+
+a:visited {
+    color: #fff;
+}
+
