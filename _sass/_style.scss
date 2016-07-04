@@ -9,6 +9,13 @@ body {
     margin-bottom: 60px;
 }
 
+/* Prevent navbar from blocking page */
+@media (min-width: 981px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
 .footer {
     position: absolute;
     bottom: 0;
