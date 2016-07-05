@@ -4,6 +4,11 @@
     }
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     padding-top: 40px;
     /* Margin bottom by footer height */
