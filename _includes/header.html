@@ -30,7 +30,7 @@
               {% endif %}
             {% endfor %}
             <li role="separator" class="divider"></li>
-            <li><p class="navbar-text">Past semesters</p></li>
+            <li><p class="dropdown-header">Past semesters</p></li>
             {% for page in site.pages %}
               {% if page.category == "cs61a" and page.tag != "current"%}
               <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>

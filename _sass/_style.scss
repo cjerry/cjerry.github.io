@@ -24,14 +24,6 @@ body {
     height: 100px;
 }
 
-.navbar .navbar-text {
-    color: #9E9E9E;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-@media (max-width: 767px) {
-    .navbar .navbar-nav .navbar-text {
-        margin-left: 16px;
-    }
+.dropdown-header {
+    color: inherit;
 }
