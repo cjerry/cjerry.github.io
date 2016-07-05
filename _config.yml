@@ -16,5 +16,11 @@ github_username:  cjerry
 linkedin_username: jerryjrchen
 google_analytics: UA-64859905-1
 
+sass:
+  load_paths:
+    - _sass
+    # Needed for bootstrap-material
+    - bower_components/bootstrap-sass/assets/stylesheets
+
 # Build settings
 markdown: kramdown
