@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    padding-top: 40px;
+    padding-top: 50px;
     /* Margin bottom by footer height */
     margin-bottom: 60px;
 }
@@ -33,4 +33,9 @@ body {
     .dropdown-header {
         color: inherit;
     }
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
 }
