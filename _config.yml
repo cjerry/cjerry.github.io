@@ -15,15 +15,6 @@ url: "http://jerryjrchen.com" # the base hostname & protocol for your site
 github_username:  cjerry
 linkedin_username: jerryjrchen
 google_analytics: UA-64859905-1
-social:
-    - icon: fa-github
-      url: https://github.com/cjerry
-    - icon: fa-linkedin
-      url: https://linkedin.com/in/jerryjrchen
-    - icon: fa-envelope
-      url: mailto:jerry.c@berkeley.edu
-    - icon: fa-file-text
-      url: https://www.dropbox.com/s/kgnbj14qclvjjxe/Jerry-Chen-Resume-R.pdf?dl=0
 
 sass:
   load_paths:

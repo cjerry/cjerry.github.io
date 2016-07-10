@@ -17,7 +17,6 @@
         {% for p in site.pages %}
           {% assign current = nil %}
           {% if page.url == p.url %}
-          {% assign current = nil %}
           {% assign current = 'active' %}
           {% endif %}
           {% if p.category == "personal" %}

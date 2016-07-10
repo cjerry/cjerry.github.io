@@ -1,0 +1,33 @@
+- course: CS 61A
+  title: Structure and Interpretation of Computer Programs
+  instructor: John DeNero
+  type: CS
+- course: CS 61B
+  title: Data Structures
+  instructor: Joshua Hug
+  type: CS
+- course: CS 61C
+  title: Great Ideas in Computer Architecture
+  instructor: John Wawrzynek, Vladimir Stojanovic
+  type: CS
+- course: CS 70
+  title: Discrete Mathematics and Probability
+  instructor: Umesh Vazirani
+  type: CS
+- course: CS 162
+  title: Operating Systems and Systems Programming
+  instructor: Anthony Joseph
+  type: CS
+- course: CS 161
+  title: Computer Security
+  instructor: David Wagner, Raluca Ada Popa
+  type: CS
+- course: EE 16A
+  title: Designing Information Devices and Systems I
+  instructor: Anant Sahi, Ali Niknejad
+  type: EE
+- course: EE 16B
+  title: Designing Information Devices and Systems II
+  instructor: Anant Sahi, Michel Maharbiz
+  type: EE
+

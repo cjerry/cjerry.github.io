@@ -4,27 +4,39 @@ title: Experience
 permalink: /experience/
 category: personal
 ---
-
-<div class="card">
-
-    <div class="card-height-indicator"></div>
-
-    <div class="card-content">
-
-        <div class="card-image">
-            <img src="./image.jpg" alt="Loading image...">
-            <h3 class="card-image-headline">Lorem Ipsum Dolor</h3>
-        </div>
-
-        <div class="card-body">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-
-        <footer class="card-footer">
-            <button class="btn btn-raised">Share</button>
-            <button class="btn btn-raised btn-warning">Learn More</button>
-        </footer>
-
-    </div>
-
+<h2>Work</h2>
+<h2>Projects</h2>
+<div class="well">
+  <div class="inner">
+    <div class="proj-header"></div>
+    <div class="proj-description"></div>
+    <div class="proj-footer"></div>
+  </div>
 </div>
+
+<h2>Coursework</h2>
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Title</th>
+    <th>Instructor</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for c in site.data.courses %}
+    {% assign color = nil %}
+    {% if c.type == 'CS' %}
+      {% assign color = 'info' %}
+    {% endif %}
+    {% if c.type == 'EE' %}
+      {% assign color = 'warning' %}
+    {% endif %}
+    <tr class="{{ color }}">
+      <td>{{ c.course }}</td>
+      <td>{{ c.title }}</td>
+      <td>{{ c.instructor }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
