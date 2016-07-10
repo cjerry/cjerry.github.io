@@ -14,6 +14,10 @@
   title: Discrete Mathematics and Probability
   instructor: Umesh Vazirani
   type: CS
+- course: CS 170
+  title: Efficient Algorithms and Intractable Problems
+  instructor: Prasad Raghavendra, Sanjam Garg
+  type: CS
 - course: CS 162
   title: Operating Systems and Systems Programming
   instructor: Anthony Joseph
@@ -24,10 +28,10 @@
   type: CS
 - course: EE 16A
   title: Designing Information Devices and Systems I
-  instructor: Anant Sahi, Ali Niknejad
+  instructor: Anant Sahai, Ali Niknejad
   type: EE
 - course: EE 16B
   title: Designing Information Devices and Systems II
-  instructor: Anant Sahi, Michel Maharbiz
+  instructor: Anant Sahai, Michel Maharbiz
   type: EE
 
