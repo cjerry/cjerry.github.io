@@ -14,9 +14,14 @@
 
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
-        {% for page in site.pages %}
-          {% if page.category == "personal" %}
-          <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% for p in site.pages %}
+          {% assign current = nil %}
+          {% if page.url == p.url %}
+          {% assign current = nil %}
+          {% assign current = 'active' %}
+          {% endif %}
+          {% if p.category == "personal" %}
+          <li class="{{ current }}"><a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
         <li class="dropdown">
