@@ -6,14 +6,10 @@
                     <div class="name">Jerry Chen</div>
                     <hr> </hr>
                     <div class="contact">
-                      <a href="https://github.com/{{ site.github_username }}"><i
-                         class="fa fa-github fa-3x fade social-glyph" aria-hidden="true"></i></a>
-                      <a href="https://linkedin.com/in/{{ site.linkedin_username }}"><i
-                         class="fa fa-linkedin fa-3x fade social-glyph" aria-hidden="true"></i></a>
-                      <a href="https://linkedin.com/in/{{ site.linkedin_username }}"><i
-                         class="fa fa-envelope fa-3x fade social-glyph" aria-hidden="true"></i></a>
-                      <a href="https://linkedin.com/in/{{ site.linkedin_username }}"><i
-                         class="fa fa-file-text fa-3x fade social-glyph" aria-hidden="true"></i></a>
+                      {% for link in site.social %}
+                      <a href="{{ link.url }}"><i
+                         class="fa {{ link.icon}} fa-3x fade social-glyph" aria-hidden="true"></i></a>
+                      {% endfor %}
                     </div>
                 </div>
             </div>
