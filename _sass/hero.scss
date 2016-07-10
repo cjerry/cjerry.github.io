@@ -1,0 +1,28 @@
+.hero {
+    text-align: center;
+    background: #009688;
+    color: #fff;
+    margin-bottom: 100px;
+    padding: 75px 0px 75px 0px;
+}
+
+.hero .name {
+    font-size: 4.75em;
+    font-weight: 700;
+}
+
+.hero .contact a {
+    color: inherit;
+}
+
+.social-glyph {
+    margin: 0px 10px 0px 10px;
+}
+
+.hero .fade {
+    opacity: 1;
+}
+
+.hero .fade:hover {
+    opacity: 0.7;
+}

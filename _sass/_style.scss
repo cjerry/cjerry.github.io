@@ -1,3 +1,4 @@
+/* Change default page width */
 @media (min-width: 1200px) {
     .container {
         max-width: 970px;
@@ -9,13 +10,13 @@ html {
     min-height: 100%;
 }
 
+/* Prevent navbar from blocking page */
 body {
     padding-top: 50px;
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 }
 
-/* Prevent navbar from blocking page */
 @media (min-width: 981px) {
     body {
         padding-top: 60px;

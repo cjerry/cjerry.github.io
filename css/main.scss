@@ -53,8 +53,11 @@ $on-laptop:        800px;
 ;
 
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
 @import "../bower_components/bootstrap-material-design/sass/bootstrap-material-design.scss";
 @import "../bower_components/bootstrap-material-design/sass/ripples.scss";
+$fa-font-path: "../bower_components/components-font-awesome/fonts/";
+@import "../bower_components/components-font-awesome/scss/font-awesome.scss";
 
-@import "style"
+// User stylesheets
+@import "style";
+@import "hero";
