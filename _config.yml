@@ -21,6 +21,7 @@ sass:
     - _sass
     # Needed for bootstrap-material
     - bower_components/bootstrap-sass/assets/stylesheets
+  style: compressed
 
 # Build settings
 markdown: kramdown
