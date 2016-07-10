@@ -29,6 +29,8 @@ body {
     height: 100px;
 }
 
-.dropdown-header {
-    color: inherit;
+@media (max-width: 768px) {
+    .dropdown-header {
+        color: inherit;
+    }
 }
