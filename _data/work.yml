@@ -1,5 +1,5 @@
 - name: UC Berkeley
-  image: /assets/sather_1.jpg
+  image: /assets/EECS_logo.jpg
   tags:
     - Python
   description:
@@ -8,7 +8,7 @@
   links:
 
 - name: Sandia National Labs
-  image: /assets/sather_1.jpg
+  image: /assets/sandia.png
   tags:
     - C
     - Python

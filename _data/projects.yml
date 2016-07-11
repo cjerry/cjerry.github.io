@@ -1,5 +1,5 @@
 - name: jerryjrchen
-  image: /assets/sather_1.jpg
+  image: /assets/jerryjrchen200.png
   tags:
     - HTML
     - CSS
@@ -10,7 +10,7 @@
   links:
     - icon: fa-github
       button-type: btn-info
-      url: https://github.com/cjerry
+      url: https://github.com/cjerry/cjerry.github.io
       text: Code
     - icon: fa-external-link
       button-type: btn-success
@@ -18,7 +18,7 @@
       text: Site
 
 - name: Gitlet
-  image:
+  image: /assets/gitlet.png
   tags:
     - Java
   description:
