@@ -1,0 +1,19 @@
+- name: UC Berkeley
+  image: /assets/sather_1.jpg
+  tags:
+    - Python
+  description:
+    - <i>Undergraduate Student Instructor</i>
+    - Developed and taught weekly lab and discussion sections for CS 61A.
+  links:
+
+- name: Sandia National Labs
+  image: /assets/sather_1.jpg
+  tags:
+    - C
+    - Python
+  description:
+    - <i>Technical Intern</i>
+    - Designed software constrained by hardware limitations for deployment on a
+      satellite payload.
+  links:

@@ -1,0 +1,27 @@
+- name: jerryjrchen
+  image: /assets/sather_1.jpg
+  tags:
+    - HTML
+    - CSS
+    - Javascript
+  description:
+    - My personal website.
+    - Most recently, I've redesigned it with Jekyll.
+  links:
+    - icon: fa-github
+      button-type: btn-info
+      url: https://github.com/cjerry
+      text: Code
+    - icon: fa-external-link
+      button-type: btn-success
+      url: http://jerryjrchen.com
+      text: Site
+
+- name: Gitlet
+  image:
+  tags:
+    - Java
+  description:
+    - Implemented a subset of the features of <a href="https://git-scm.com">Git</a>.
+      Includes commits, merging, rebasing, and remote server backup.
+    - I cannot publicly display source code for school projects.

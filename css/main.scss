@@ -29,6 +29,11 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
+// MD vars
+$divider-color:    #B6B6B6;
+
+
+
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -61,3 +66,4 @@ $fa-font-path: "../bower_components/components-font-awesome/fonts/";
 // User stylesheets
 @import "style";
 @import "hero";
+@import "showcase";

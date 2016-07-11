@@ -1,0 +1,27 @@
+.showcase-item .well {
+    min-height: 500px;
+}
+
+.showcase-image {
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.showcase-header h3 {
+    color: $brand-primary;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $divider-color;
+}
+
+.showcase-footer {
+    width: 100%;
+    clear: both;
+}
+
+.showcase-footer .fa {
+    line-height: 100%;
+    vertical-align: middle;
+}
