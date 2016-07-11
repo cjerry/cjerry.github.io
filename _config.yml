@@ -18,10 +18,7 @@ resume: https://www.dropbox.com/s/kgnbj14qclvjjxe/Jerry-Chen-Resume-R.pdf?dl=0
 google_analytics: UA-64859905-1
 
 sass:
-  load_paths:
-    - _sass
-    # Needed for bootstrap-material
-    - bower_components/bootstrap-sass/assets/stylesheets
+  load_paths: _sass
   style: compressed
 
 # Build settings
