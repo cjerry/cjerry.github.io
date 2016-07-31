@@ -1,0 +1,21 @@
+resources:
+  - number: 0
+    description: Intro and Lost on the Moon
+    downloads:
+      - name: Slides
+        type: slides
+        link: ???
+
+locations:
+  - type: Office Hour
+    time: ???
+    location: ???
+  - type: Office Hour
+    time: ???
+    location: ???
+  - type: Discussion
+    time: ???
+    location: ???
+  - type: Lab
+    time: ???
+    location: ???

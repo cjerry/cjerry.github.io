@@ -50,7 +50,14 @@ p {
 }
 
 @media (min-width: 979px) {
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+}
+
+#resources {
+    > tbody, tr, td {
+        vertical-align: middle;
+        font-size: 16px;
+    }
 }

@@ -6,6 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
+owner: Jerry Chen
 title: jerryjrchen
 email: jerry.c@berkeley.edu
 description: > # this means to ignore newlines until "baseurl:"
@@ -23,3 +24,5 @@ sass:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  parse_block_html: true
