@@ -14,30 +14,32 @@
 
     <div class="collapse navbar-collapse" id="navbar-top">
       <ul class="nav navbar-nav navbar-right">
+        {% assign current_cs61a = nil %}
         {% for p in site.pages %}
           {% assign current = nil %}
-          {% if page.url == p.url %}
-          {% assign current = 'active' %}
+          {% if page.url == p.url and p.category == "cs61a" %}
+            {% assign current_cs61a = 'active' %}
+          {% elsif page.url == p.url %}
+            {% assign current = 'active' %}
           {% endif %}
           {% if p.category == "personal" %}
           <li class="{{ current }}"><a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
-        <li class="dropdown">
+        <li class="dropdown {{ current_cs61a }}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-            role="button" aria-haspopup="true" aria-expanded="false">For CS61A
-            Students <span class="caret"></span></a>
+            role="button" aria-haspopup="true" aria-expanded="false">For CS61A Students <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            {% for page in site.pages %}
-              {% if page.category == "cs61a" and page.tag == "current"%}
-              <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% for p in site.pages %}
+              {% if p.category == "cs61a" and p.tag == "current"%}
+              <li><a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
               {% endif %}
             {% endfor %}
             <li role="separator" class="divider"></li>
             <li><p class="dropdown-header">Past semesters</p></li>
-            {% for page in site.pages %}
-              {% if page.category == "cs61a" and page.tag != "current"%}
-              <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% for p in site.pages %}
+              {% if p.category == "cs61a" and p.tag != "current"%}
+              <li><a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
               {% endif %}
             {% endfor %}
           </ul>
