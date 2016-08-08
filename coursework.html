@@ -1,0 +1,31 @@
+---
+layout: page
+title: Coursework
+permalink: /coursework/
+category: personal
+---
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Course</th>
+    <th>Title</th>
+    <th>Instructor</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for c in site.data.courses %}
+    {% assign color = nil %}
+    {% if c.type == 'CS' %}
+      {% assign color = 'info' %}
+    {% endif %}
+    {% if c.type == 'EE' %}
+      {% assign color = 'warning' %}
+    {% endif %}
+    <tr class="{{ color }}">
+      <td>{{ c.course }}</td>
+      <td>{{ c.title }}</td>
+      <td>{{ c.instructor }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
