@@ -1,3 +1,12 @@
+- name: Optiver
+  image: /assets/optiver_logo.png
+  tags:
+    - C#
+    - SQL
+  description:
+    - <i>Development Intern</i>
+    - Developed high quality and scalable <tt>.NET</tt> applications for traders.
+
 - name: UC Berkeley
   image: /assets/EECS_logo.jpg
   tags:
