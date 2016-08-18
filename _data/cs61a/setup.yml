@@ -1,0 +1,92 @@
+editors:
+  - name: Vim
+    info:
+      - My preferred text editor. Fun fact - Vim is a clone of Vi, which was
+        written by Berkeley alum and programming superstar Bill Joy.
+      - <b>Pros:</b> Fast and addictive. Feature rich, but you only need to
+        learn a minimal amount to become productive. You'll also look cool doing
+        it. :)
+      - <b>Cons:</b> Steep learning curve. Customization is required to unlock
+        many nice features that are default in other editors.
+    links:
+      - icon: fa-download
+        link: http://www.vim.org/download.php
+  - name: Atom
+    info:
+      - With a built in package manager, Atom is incredibly easy to customize
+        (like the extension manager for your favorite web browser, but arguably
+        better).
+        On top of that, sensible default packages are installed as well!
+      - <b>Pros:</b> Easy to use and customize.
+      - <b>Cons:</b> In the editor world, Atom is relatively new. There are
+        still some bugs that need to be sorted out, and many packages could use
+        significant improvement.
+    links:
+      - icon: fa-download
+        link: https://atom.io
+
+terminals:
+  - name: iTerm2
+    info:
+      - As far as I'm concerned, this is basically a better version of terminal
+        that ships with OSX.
+      - <b>Pros:</b> Just look at this <a
+        href="https://www.iterm2.com/features.html">beautiful list of
+        features</a>.
+      - <b>Cons:</b> OSX only.
+    links:
+      - icon: fa-apple
+        link: https://www.iterm2.com
+  - name: Babun
+    info:
+      - Babun is probably the best Windows shell I've used. It comes built in
+        with <a href="http://ohmyz.sh/">oh my zsh</a> (z shell) which is usually
+        a bit of a hassle to install on Windows.
+      - <b>Pros:</b> Comes built in with a package manager which beats whatever
+        mess Cygwin and GitBash have.
+      - <b>Cons:</b> There are some potentially annoying defaults that you have
+        to manually disable (for example, a self-check on startup). And... it
+        still uses Mintty, which means no tabs, minimal window configuration,
+        etc.
+    links:
+      - icon: fa-windows
+        link: http://babun.github.io/
+
+misc:
+  - name: Homebrew
+    info:
+      - Package manager for OSX. In a nutshell, package managers make it easy
+        for developers to install software and keep it up to date. Lots of
+        command line applications are installable through Homebrew, and Homebrew
+        Cask allows you to install OSX applications as well!
+    links:
+      - icon: fa-apple
+        link: http://brew.sh/
+      - icon: fa-apple
+        link: https://caskroom.github.io/
+        text: Cask
+  - name: Chocolatey
+    info:
+      - For the sake of completeness, here's a package manager for Windows. I've
+        never used it, however.
+    links:
+      - icon: fa-windows
+        link: https://chocolatey.org/install
+  - name: Oh My Zsh
+    info:
+      - Replace the default shell with Zsh, extended with many useful plugins.
+        Highly customizable and features some pretty nifty themes as well.
+      - Oh My Zsh is installable on Windows, but it requires some extra details.
+    links:
+      - icon: fa-download
+        link: http://ohmyz.sh/
+  - name: Git
+    info:
+      - Git is a version control system which basically lets you save snapshots
+        of your code.
+      - The real beauty of Git is that it allows you to fearlessly experiment
+        with new ideas. It might take a while to learn, but it will only be more
+        prevalent later on in school & work!
+    links:
+      - icon: fa-download
+        link: https://git-scm.com/download/

@@ -1,0 +1,76 @@
+---
+layout: page
+title: Development Setup
+permalink: cs61a/setup/
+category: cs61a
+tag: current
+---
+<p>Here are details about the tools that I currently use or have used.</p>
+
+<div class="alert alert-danger">
+  <p>
+    <b>Wait!</b> Before downloading anything, consider getting a
+    <u><a href="#packagemanager">package manager</a></u>
+    for your operating system first. If you're on Linux, then you should already
+    have one.
+  </p>
+</div>
+
+<!-- Editors -->
+{% for e in site.data.cs61a.setup.editors %}
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ e.name }}</h3>
+  </div>
+  <div class="panel-body">
+    {% for p in e.info %}
+    <p>
+    {{ p }}
+    </p>
+    {% endfor %}
+    {% for l in e.links %}
+    <a href="{{ l.link }}" class="btn btn-raised btn-primary"><i class="fa {{ l.icon }}"></i> {{ l.text }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<!-- Terminal -->
+{% for t in site.data.cs61a.setup.terminals %}
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ t.name }}</h3>
+  </div>
+  <div class="panel-body">
+    {% for p in t.info %}
+    <p>
+    {{ p }}
+    </p>
+    {% endfor %}
+    {% for l in t.links %}
+    <a href="{{ l.link }}" class="btn btn-raised btn-success"><i class="fa {{ l.icon }}"></i> {{ l.text }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+<!-- Miscellaneous -->
+<a id="packagemanager" class="anchor"></a>
+
+{% for m in site.data.cs61a.setup.misc %}
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{ m.name }}</h3>
+  </div>
+  <div class="panel-body">
+    {% for p in m.info %}
+    <p>
+    {{ p }}
+    </p>
+    {% endfor %}
+    {% for l in m.links %}
+    <a href="{{ l.link }}" class="btn btn-raised btn-info"><i class="fa {{ l.icon }}"></i> {{ l.text }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
