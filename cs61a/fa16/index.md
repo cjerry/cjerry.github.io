@@ -7,8 +7,10 @@ tag: current
 ---
 
 <div class="jumbotron">
-**TA:** {{ site.owner }}  
+**TA:** {{ site.owner }}
+
 **Email:** [{{ site.email }}](<mailto:{{ site.email }}>)
+(Please include "CS 61A" in the subject line.)
 
 ### Hi there!
 </div>
