@@ -7,15 +7,12 @@ resources:
         link: ???
 
 locations:
-  - type: Office Hour
-    time: ???
-    location: ???
-  - type: Office Hour
-    time: ???
-    location: ???
+  - type: Office Hours
+    time: Th 4:00-6:00pm
+    location: 109 Morgan
   - type: Discussion
-    time: ???
-    location: ???
+    time: Th 11:30-12:30pm
+    location: 540AB Cory
   - type: Lab
-    time: ???
-    location: ???
+    time: Th 11:30-12:30pm
+    location: 275 Soda
