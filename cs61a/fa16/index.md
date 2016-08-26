@@ -12,7 +12,8 @@ tag: current
 **Email:** [{{ site.email }}](<mailto:{{ site.email }}>)
 (Please include "CS 61A" in the subject line.)
 
-### Hi there!
+Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my
+development setup.
 </div>
 
 ## Discussion Resources
