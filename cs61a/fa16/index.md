@@ -14,6 +14,9 @@ tag: current
 
 Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my
 development setup.
+
+<a href="http://bit.do/jerrydisc" class="btn btn-raised btn-success">Submit
+discussion attendance</a>
 </div>
 
 ## Discussion Resources
