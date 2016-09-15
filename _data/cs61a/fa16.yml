@@ -17,6 +17,12 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc02.pdf
+  - number: extra
+    description: Midterm 1 Review
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/MT1_Review.pdf
 
 locations:
   - type: Office Hours
