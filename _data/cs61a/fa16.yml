@@ -23,6 +23,12 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/MT1_Review.pdf
+  - number: 3
+    description: Sequences and Trees
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/Disc03.pdf
 
 locations:
   - type: Office Hours
