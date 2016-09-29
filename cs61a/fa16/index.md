@@ -17,6 +17,10 @@ development setup.
 
 <a href="http://bit.do/jerrydisc" class="btn btn-raised btn-success">Submit
 discussion attendance</a>
+<a href="http://bit.do/jerrylabfb" class="btn btn-raised btn-warning">Lab
+Feedback</a>
+<a href="http://bit.do/jerrydiscfb" class="btn btn-raised btn-warning">Discussion
+Feedback</a>
 </div>
 
 ## Discussion Resources
