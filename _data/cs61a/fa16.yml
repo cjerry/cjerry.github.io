@@ -29,6 +29,13 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc03.pdf
+  - number: 4
+    description: Growth and Nonlocals
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/Disc04.pdf
+
 
 locations:
   - type: Office Hours
