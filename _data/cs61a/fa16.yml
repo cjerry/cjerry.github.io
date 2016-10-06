@@ -35,6 +35,12 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc04.pdf
+  - number: 5
+    description: Object Oriented Programming
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/Disc05.pdf
 
 
 locations:
