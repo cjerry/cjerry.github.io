@@ -41,6 +41,15 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc05.pdf
+  - number: practice
+    description: Linked List and BTree problems
+    downloads:
+      - name: LList
+        type: code
+        link: fa16/assets/link_practice.zip
+      - name: BTree
+        type: code
+        link: fa16/assets/bt_practice.zip
 
 
 locations:
