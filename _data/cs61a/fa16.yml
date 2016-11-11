@@ -62,6 +62,12 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc08.pdf
+  - number: 9
+    description: Delayed Expressions
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/Disc09.pdf
 
 
 locations:
