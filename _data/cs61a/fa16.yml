@@ -74,6 +74,12 @@ resources:
       - name: Slides
         type: slides
         link: fa16/assets/Disc10.pdf
+  - number: 11
+    description: Special Topics
+    downloads:
+      - name: Slides
+        type: slides
+        link: fa16/assets/Disc11.pdf
 
 
 locations:
