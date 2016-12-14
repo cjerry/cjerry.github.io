@@ -7,13 +7,15 @@ tag: current
 ---
 
 <div class="jumbotron">
-**TA:** {{ site.owner }}
+# Thanks for a great semester, and good luck on the final!
 
+**TA:** {{ site.owner }}
 **Email:** [{{ site.email }}](<mailto:{{ site.email }}>)
 (Please include "CS 61A" in the subject line.)
 
 Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my
 development setup.
+
 
 <a href="http://bit.do/jerrydisc" class="btn btn-raised btn-success">Submit
 discussion attendance</a>
