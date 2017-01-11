@@ -1,0 +1,18 @@
+resources:
+  - number: 0
+    description: Intro and Lost on the Moon
+    downloads:
+      - name: Slides
+        type: slides
+        link: TODO
+
+locations:
+  - type: Office Hours
+    time: TBD
+    location: TBD
+  - type: Discussion
+    time: TBD
+    location: TBD
+  - type: Lab
+    time: TBD
+    location: TBD
