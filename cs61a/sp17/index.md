@@ -17,8 +17,8 @@ Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious abou
 development setup.
 
 
-<!--<a href="TODO" class="btn btn-raised btn-success">Submit-->
-<!--discussion attendance</a>-->
+<a href="http://tiny.cc/jerrydisc" class="btn btn-raised btn-success">Submit
+discussion attendance</a>
 <!--<a href="http://bit.do/jerrylabfb" class="btn btn-raised btn-warning">Lab-->
 <!--Feedback</a>-->
 <!--<a href="http://bit.do/jerrydiscfb" class="btn btn-raised btn-warning">Discussion-->
