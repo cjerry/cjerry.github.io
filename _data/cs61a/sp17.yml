@@ -4,7 +4,7 @@ resources:
     downloads:
       - name: Slides
         type: slides
-        link: TODO
+        link: sp17/assets/disc0.pdf
 
 locations:
   - type: Office Hours
