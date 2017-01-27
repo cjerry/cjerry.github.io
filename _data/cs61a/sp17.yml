@@ -5,6 +5,12 @@ resources:
       - name: Slides
         type: slides
         link: sp17/assets/disc0.pdf
+  - number: 1
+    description: Control, Environments, and HOFs
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp17/assets/disc01.pdf
 
 locations:
   - type: Office Hours
@@ -18,7 +24,21 @@ locations:
     location: 271 Soda
 
 notes:
-  - date: Week 1
+  - date: Week 0
     content:
       - text: Welcome to 61A! Check in for the [first week here](http://tinyurl.com/firstdisc).
       - text: Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my development setup.
+  - date: Week 1
+    content:
+      - text: Remember to check in each week for attendance. Link is above.
+
+locations:
+  - type: Office Hours
+    time: Tu 3-4pm
+    location: 109 Morgan
+  - type: Discussion
+    time: Fri 12:30pm-2pm
+    location: 310 Soda
+  - type: Lab
+    time: Wed 12:30pm-2pm
+    location: 271 Soda
