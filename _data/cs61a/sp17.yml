@@ -11,6 +11,12 @@ resources:
       - name: Slides
         type: slides
         link: sp17/assets/disc01.pdf
+  - number: 2
+    description: More Environments and Recursion
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp17/assets/disc02.pdf
 
 locations:
   - type: Office Hours
