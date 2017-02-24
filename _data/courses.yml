@@ -26,6 +26,14 @@
   title: Computer Security
   instructor: David Wagner, Raluca Ada Popa
   type: CS
+- course: CS 188
+  title: Artificial Intelligence
+  instructor: Joshua Hug, Adam Janin
+  type: CS
+- course: CS 168
+  title: Internet Architecture and Networking
+  instructor: Scott Shenker
+  type: CS
 - course: EE 16A
   title: Designing Information Devices and Systems I
   instructor: Anant Sahai, Ali Niknejad
@@ -33,5 +41,9 @@
 - course: EE 16B
   title: Designing Information Devices and Systems II
   instructor: Anant Sahai, Michel Maharbiz
+  type: EE
+- course: EE 120
+  title: Signals and Systems
+  instructor: Ronald Fearing
   type: EE
 
