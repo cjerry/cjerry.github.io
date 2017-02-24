@@ -23,6 +23,12 @@ resources:
       - name: Slides
         type: slides
         link: sp17/assets/disc03.pdf
+  - number: 5
+    description: Mutation and OOP
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp17/assets/disc05.pdf
 
 locations:
   - type: Office Hours
@@ -46,6 +52,11 @@ notes:
   - date: Week 3
     content:
       - text: Here's a interesting perspective on how defaults slices are handled [(Stack Overflow)](http://stackoverflow.com/a/12522871/6469972).
+  - date: Week 5
+    content:
+      - text: Please fill out feedback!
+      - text: Link for [discussion feedback](http://tiny.cc/jerrydiscfb).
+      - text: Link for [lab feedback](http://tiny.cc/jerrylabfb).
 
 locations:
   - type: Office Hours
