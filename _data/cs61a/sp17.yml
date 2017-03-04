@@ -29,6 +29,12 @@ resources:
       - name: Slides
         type: slides
         link: sp17/assets/disc05.pdf
+  - number: 6
+    description: Iterators and Generators
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp17/assets/disc06.pdf
 
 locations:
   - type: Office Hours
