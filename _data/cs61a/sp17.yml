@@ -4,37 +4,37 @@ resources:
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc0.pdf
+        link: /cs61a/sp17/assets/disc0.pdf
   - number: 1
     description: Control, Environments, and HOFs
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc01.pdf
+        link: /cs61a/sp17/assets/disc01.pdf
   - number: 2
     description: More Environments and Recursion
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc02.pdf
+        link: /cs61a/sp17/assets/disc02.pdf
   - number: 3
     description: Sequences and Trees
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc03.pdf
+        link: /cs61a/sp17/assets/disc03.pdf
   - number: 5
     description: Mutation and OOP
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc05.pdf
+        link: /cs61a/sp17/assets/disc05.pdf
   - number: 6
     description: Iterators and Generators
     downloads:
       - name: Slides
         type: slides
-        link: sp17/assets/disc06.pdf
+        link: /cs61a/sp17/assets/disc06.pdf
 
 locations:
   - type: Office Hours

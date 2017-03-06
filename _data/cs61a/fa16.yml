@@ -4,82 +4,82 @@ resources:
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc0.pdf
+        link: /cs61a/fa16/assets/Disc0.pdf
   - number: 1
     description: Control and Environments
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc01.pdf
+        link: /cs61a/fa16/assets/Disc01.pdf
   - number: 2
     description: More Environments and Recursion
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc02.pdf
+        link: /cs61a/fa16/assets/Disc02.pdf
   - number: extra
     description: Midterm 1 Review
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/MT1_Review.pdf
+        link: /cs61a/fa16/assets/MT1_Review.pdf
   - number: 3
     description: Sequences and Trees
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc03.pdf
+        link: /cs61a/fa16/assets/Disc03.pdf
   - number: 4
     description: Growth and Nonlocals
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc04.pdf
+        link: /cs61a/fa16/assets/Disc04.pdf
   - number: 5
     description: Object Oriented Programming
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc05.pdf
+        link: /cs61a/fa16/assets/Disc05.pdf
   - number: practice
     description: Linked List and BTree problems
     downloads:
       - name: LList
         type: code
-        link: fa16/assets/link_practice.zip
+        link: /cs61a/fa16/assets/link_practice.zip
       - name: BTree
         type: code
-        link: fa16/assets/bt_practice.zip
+        link: /cs61a/fa16/assets/bt_practice.zip
   - number: 7
     description: Scheme
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc07.pdf
+        link: /cs61a/fa16/assets/Disc07.pdf
   - number: 8
     description: Interpreters and Tail Calls
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc08.pdf
+        link: /cs61a/fa16/assets/Disc08.pdf
   - number: 9
     description: Delayed Expressions
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc09.pdf
+        link: /cs61a/fa16/assets/Disc09.pdf
   - number: 10
     description: SQL
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc10.pdf
+        link: /cs61a/fa16/assets/Disc10.pdf
   - number: 11
     description: Special Topics
     downloads:
       - name: Slides
         type: slides
-        link: fa16/assets/Disc11.pdf
+        link: /cs61a/fa16/assets/Disc11.pdf
 
 
 locations:
