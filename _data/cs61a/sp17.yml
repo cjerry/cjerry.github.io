@@ -59,6 +59,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/sp17/assets/disc10.pdf
+  - number: 11
+    description: SQL
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/sp17/assets/disc11.pdf
 
 locations:
   - type: Office Hours
@@ -87,6 +93,9 @@ notes:
       - text: Please fill out feedback!
       - text: Link for [discussion feedback](http://tiny.cc/jerrydiscfb).
       - text: Link for [lab feedback](http://tiny.cc/jerrylabfb).
+  - date: Week 14
+    content:
+      - text: Please come to lab next week. It will be significantly easier to setup and debug in person.
 
 locations:
   - type: Office Hours
