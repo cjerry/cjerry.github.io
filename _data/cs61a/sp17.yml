@@ -96,6 +96,9 @@ notes:
   - date: Week 14
     content:
       - text: Please come to lab next week. It will be significantly easier to setup and debug in person.
+  - date: Week Final
+    content:
+      - text: Thanks for an awesome semester! Study hard, and good luck on the final!
 
 locations:
   - type: Office Hours
