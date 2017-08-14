@@ -13,9 +13,7 @@ tag: current
 **Email:** [{{ site.email }}](<mailto:{{ site.email }}>)
 (Please include "CS 61A" in the subject line.)
 
-<!--<a href="http://tiny.cc/jerrydisc" class="btn btn-raised btn-success">-->
-    <!--Discussion Attendance-->
-<!--</a>-->
+<!--<a href="http://tiny.cc/jerrydisc" class="btn btn-raised btn-success"> Discussion Attendance </a>-->
 </div>
 
 
