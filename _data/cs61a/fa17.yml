@@ -1,0 +1,24 @@
+resources:
+  - number: 0
+    description: Intro and Lost on the Moon
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/disc0.pdf
+
+locations:
+  - type: Office Hours
+    time: TBD
+    location: TBD
+  - type: Discussion
+    time: TBD
+    location: TBD
+  - type: Lab
+    time: TBD
+    location: TBD
+
+notes:
+  - date: Week 0
+    content:
+      - text: Welcome to 61A!
+      - text: Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my development setup.
