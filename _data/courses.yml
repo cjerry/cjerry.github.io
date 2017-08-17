@@ -34,6 +34,15 @@
   title: Internet Architecture and Networking
   instructor: Scott Shenker
   type: CS
+- course: CS 164
+  title: Programming Languages and Compilers
+  instructor: Koushik Sen
+  type: CS
+- course: CS 267
+  title: Applications of Parallel Computers
+  instructor: Kathy Yelick, Aydin Buluc
+  type: CS
+
 - course: EE 16A
   title: Designing Information Devices and Systems I
   instructor: Anant Sahai, Ali Niknejad
