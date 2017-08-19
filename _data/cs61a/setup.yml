@@ -1,7 +1,10 @@
 editors:
-  - name: Vim
+  - name: Neovim
     info:
-      - My preferred text editor. Fun fact - Vim is a clone of Vi, which was
+      - Neovim is the future of Vim. It comes with some sane defaults and
+        extends default Vim functionality to make it better. Here's why you
+        should use Vim at all.
+      - Fun fact - Vim is a clone of Vi, which was
         written by Berkeley alum and programming superstar Bill Joy.
       - <b>Pros:</b> Fast and addictive. Feature rich, but you only need to
         learn a minimal amount to become productive. You'll also look cool doing
@@ -10,7 +13,11 @@ editors:
         many nice features that are default in other editors.
     links:
       - icon: fa-download
+        link: https://neovim.io
+        text: Neovim
+      - icon: fa-download
         link: http://www.vim.org/download.php
+        text: Vim
   - name: Atom
     info:
       - With a built in package manager, Atom is incredibly easy to customize
@@ -29,11 +36,11 @@ terminals:
   - name: iTerm2
     info:
       - As far as I'm concerned, this is basically a better version of terminal
-        that ships with OSX.
+        that ships with macOS.
       - <b>Pros:</b> Just look at this <a
         href="https://www.iterm2.com/features.html">beautiful list of
         features</a>.
-      - <b>Cons:</b> OSX only.
+      - <b>Cons:</b> macOS only.
     links:
       - icon: fa-apple
         link: https://www.iterm2.com
@@ -55,10 +62,10 @@ terminals:
 misc:
   - name: Homebrew
     info:
-      - Package manager for OSX. In a nutshell, package managers make it easy
+      - Package manager for macOS. In a nutshell, package managers make it easy
         for developers to install software and keep it up to date. Lots of
         command line applications are installable through Homebrew, and Homebrew
-        Cask allows you to install OSX applications as well!
+        Cask allows you to install macOS applications as well!
     links:
       - icon: fa-apple
         link: http://brew.sh/
