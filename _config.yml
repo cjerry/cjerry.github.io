@@ -16,7 +16,6 @@ url: "http://jerryjrchen.com" # the base hostname & protocol for your site
 github_username:  cjerry
 linkedin_username: jerryjrchen
 resume: https://www.dropbox.com/s/kgnbj14qclvjjxe/Jerry-Chen-Resume-R.pdf?dl=0
-google_analytics: UA-64859905-1
 
 sass:
   load_paths: _sass
