@@ -11,15 +11,15 @@ locations:
     time: TBD
     location: TBD
   - type: Discussion
-    time: TBD
-    location: TBD
+    time: Th 15:30-17:00
+    location: 243 Dwinelle
   - type: Lab
-    time: TBD
-    location: TBD
+    time: Tu 15:30-17:00
+    location: 271 Soda
 
 notes:
   - date: Week 0
     content:
-      - text: Welcome to 61A!
+      - text: Welcome to 61A! [Check in for discussion 0 here.](https://v.gd/jc_00)
       - text: Check out [this page](http://jerryjrchen.com/cs61a/setup) if you're curious about my development setup.
       - text: Some [section music](https://itunes.apple.com/us/playlist/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/idpl.u-PDb4zA4TkEY2vY).
