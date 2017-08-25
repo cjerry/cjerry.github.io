@@ -4,7 +4,7 @@ resources:
     downloads:
       - name: Slides
         type: slides
-        link: /cs61a/fa17/assets/disc0.pdf
+        link: /cs61a/fa17/assets/Disc00.pdf
 
 locations:
   - type: Office Hours
