@@ -11,6 +11,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc01.pdf
+  - number: 2
+    description: Environments and Recursion
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc02.pdf
 
 locations:
   - type: Office Hours
