@@ -17,6 +17,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc02.pdf
+  - number: 3
+    description: Trees and Sequences
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc03.pdf
 
 locations:
   - type: Office Hours
