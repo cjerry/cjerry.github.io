@@ -23,6 +23,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc03.pdf
+  - number: 4
+    description: Growth and Mutation
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc04.pdf
 
 locations:
   - type: Office Hours
