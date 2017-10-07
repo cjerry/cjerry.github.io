@@ -29,6 +29,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc04.pdf
+  - number: 5
+    description: Object Oriented Programming
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc05.pdf
 
 locations:
   - type: Office Hours
