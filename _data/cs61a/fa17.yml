@@ -35,6 +35,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc05.pdf
+  - number: 6
+    description: Linked Lists
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc06.pdf
 
 locations:
   - type: Office Hours
