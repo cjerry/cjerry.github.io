@@ -75,16 +75,16 @@ resources:
 locations:
   - type: Office Hours
     time: M 19:30-20:00
-    location: 521 Cory
+    location: 247 Cory
   - type: Office Hours
     time: W 18:30-19:30
-    location: 400 Cory
+    location: 247 Cory
   - type: Office Hours
     time: Th 17:00-18:00
     location: 109 Morgan
   - type: Office Hours
     time: Th 18:30-19:30
-    location: 400 Cory
+    location: 247 Cory
   - type: Discussion
     time: Th 15:30-17:00
     location: 243 Dwinelle
