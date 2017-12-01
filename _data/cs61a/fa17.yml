@@ -65,6 +65,12 @@ resources:
       - name: Slides
         type: slides
         link: /cs61a/fa17/assets/Disc10.pdf
+  - number: 10
+    description: Special Topics
+    downloads:
+      - name: Slides
+        type: slides
+        link: /cs61a/fa17/assets/Disc11.pdf
 
 locations:
   - type: Office Hours
