@@ -1,0 +1,42 @@
+.hero {
+    text-align: center;
+    background: $grey-color-light;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: $spacing-unit 0px $spacing-unit 0px;
+}
+
+.hero .name {
+    font-size: 3.00em;
+    font-weight: 500;
+}
+
+.hero .contact a {
+    color: inherit;
+}
+
+.social-glyph {
+    margin: 0px 10px 0px 10px;
+}
+
+.hero .fade {
+    opacity: 1;
+}
+
+.hero .fade:hover {
+    opacity: 0.7;
+}
+
+.hero hr {
+    background-color: $text-color;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero a {
+    border-bottom: none;
+}
+
+.tight {
+    display: inline-block;
+}

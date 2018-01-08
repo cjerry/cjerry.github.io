@@ -1,0 +1,31 @@
+// Link underlining
+.site-title, .site-title:visited, .site-title:hover {
+    border-bottom: none;
+}
+
+.site-nav .page-link, .site-nav .page-link:hover {
+    border-bottom: none;
+}
+
+
+a {
+    border-bottom: 1px dotted $text-color;
+    text-decoration: none;
+}
+
+a, a:visited {
+    color: inherit;
+}
+
+a:hover {
+    border-bottom: 1px solid $text-color;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: $text-color;
+}
+
+.post-continue a, .post-continue a:visited {
+    border-bottom: none;
+}

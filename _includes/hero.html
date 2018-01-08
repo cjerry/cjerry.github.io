@@ -1,18 +1,11 @@
 <div class="hero">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div>
-                    <div class="name">Jerry Chen</div>
-                    <hr> </hr>
-                    <div class="contact">
-                      {% for link in site.data.social %}
-                      <a href="{{ link.url }}"><i
-                         class="fa {{ link.icon}} fa-3x fade social-glyph" aria-hidden="true"></i></a>
-                      {% endfor %}
-                    </div>
-                </div>
-            </div>
+    <div class="tight">
+        <div class="name">Jerry Chen</div>
+        <hr/>
+        <div class="contact">
+            {% for link in site.data.social %}
+            <a href="{{ link.url }}"><i class="fa {{ link.icon }} fa-3x fade social-glyph" aria-hidden="true"></i></a>
+            {% endfor %}
         </div>
     </div>
 </div>

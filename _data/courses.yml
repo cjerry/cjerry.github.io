@@ -42,6 +42,10 @@
   title: Applications of Parallel Computers
   instructor: Kathy Yelick, Aydin Buluc
   type: CS
+- course: CS 186
+  title: Database Systems
+  instructor: Joseph Hellerstein
+  type: CS
 
 - course: EE 16A
   title: Designing Information Devices and Systems I
@@ -54,5 +58,9 @@
 - course: EE 120
   title: Signals and Systems
   instructor: Ronald Fearing
+  type: EE
+- course: EE 127
+  title: Optimization Models in Engineering
+  instructor: Giuseppe Calafiore
   type: EE
 

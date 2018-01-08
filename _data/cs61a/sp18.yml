@@ -1,0 +1,23 @@
+resources:
+  - number: 0
+    description: Intro and Lost on the Moon
+    downloads:
+      - name: Slides
+        type: slides
+        link: TODO
+
+locations:
+  - type: Office Hours
+    time: TBD
+    location: TBD
+  - type: Discussion
+    time: TBD
+    location: TBD
+  - type: Lab
+    time: TBD
+    location: TBD
+
+notes:
+  - Welcome to CS 61A! [Check in for discussion 0 here](https://v.gd/jc_00).
+  - Check out [this page](/cs61a/setup) if you're curious about my development setup.
+  - Some [section music](https://itunes.apple.com/us/playlist/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/idpl.u-PDb4zA4TkEY2vY).

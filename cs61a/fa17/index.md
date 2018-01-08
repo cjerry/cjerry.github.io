@@ -1,9 +1,7 @@
 ---
 layout: page
 title: CS 61A Fall 2017
-permalink: cs61a/
 category: cs61a
-tag: current
 ---
 
 <div class="jumbotron">
