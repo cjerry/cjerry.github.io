@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Jerry Chen's website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jerryjrchen.com" # the base hostname & protocol for your site
-github_username:  cjerry
+github_username:  jerryjrchen
 linkedin_username: jerryjrchen
 resume: https://www.dropbox.com/s/kgnbj14qclvjjxe/Jerry-Chen-Resume-R.pdf?dl=0
 
