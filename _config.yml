@@ -40,13 +40,13 @@ permalink: pretty
 # Theme setting
 theme: jekyll-whiteglass
 plugins:
-  #- jekyll-archives
-  #- jekyll-paginate
-  #- jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-sitemap
 
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
-paginate: 5 # TODO: pagination is broken
+paginate: 9999 # TODO: pagination is broken
 
 jekyll-archives:
   enabled:
