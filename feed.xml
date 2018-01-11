@@ -1,3 +1,252 @@
----
-layout: feed
----
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <generator uri="http://jekyllrb.com" version="3.6.2">Jekyll</generator>
+  
+  
+  <link href="http://jerryjrchen.com/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://jerryjrchen.com/" rel="alternate" type="text/html" />
+  <updated>2018-01-11T08:28:11+00:00</updated>
+  <id>http://jerryjrchen.com//</id>
+
+  
+    <title type="html">jerryjrchen</title>
+  
+
+  
+    <subtitle>Jerry Chen's website
+</subtitle>
+  
+
+  
+
+  
+  
+    <entry>
+      
+      <title type="html">Development Setup →</title>
+      
+      <link href="http://jerryjrchen.com/2018/01/10/setup/" rel="alternate" type="text/html" title="Development Setup" />
+      <published>2018-01-10T00:00:00+00:00</published>
+      <updated>2018-01-10T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2018/01/10/setup</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2018/01/10/setup/"></content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html"></summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Nit-picks</title>
+      
+      <link href="http://jerryjrchen.com/2017/09/10/nitpicks/" rel="alternate" type="text/html" title="Nit-picks" />
+      <published>2017-09-10T00:00:00+00:00</published>
+      <updated>2017-09-10T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2017/09/10/nitpicks</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2017/09/10/nitpicks/">&lt;h2 id=&quot;on-the-topic-of-punctuation&quot;&gt;On the topic of punctuation&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;This is a hyphen: &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;This is a dash: &lt;code class=&quot;highlighter-rouge&quot;&gt;--&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do not say “ls &lt;em&gt;dash&lt;/em&gt; a” when you mean “ls &lt;em&gt;hyphen&lt;/em&gt; a”.&lt;/p&gt;
+
+&lt;p&gt;You can cheat this a bit when writing English sentences, but the command line is
+usually much less forgiving.&lt;/p&gt;
+
+&lt;p&gt;I oftentimes say “hyphen hyphen” when I mean dash, since it seems like a lot of
+people confuse the two. I dream of a world where I can confidently just say
+“dash”…&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">On the topic of punctuation This is a hyphen: - This is a dash: --</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Configuration, part 2</title>
+      
+      <link href="http://jerryjrchen.com/2017/08/23/configuration/" rel="alternate" type="text/html" title="Configuration, part 2" />
+      <published>2017-08-23T00:00:00+00:00</published>
+      <updated>2017-08-23T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2017/08/23/configuration</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2017/08/23/configuration/">&lt;p&gt;The standard terminal that comes with macOS and most Linux distros is fine
+(by the way, Command Prompt for Windows is not). But why settle for fine, when you can get
+something even better?&lt;/p&gt;
+
+&lt;h3 id=&quot;a-better-terminalapp&quot;&gt;A better Terminal.app&lt;/h3&gt;
+&lt;p&gt;As I mention on my &lt;a href=&quot;/cs61a/setup&quot;&gt;setup page&lt;/a&gt;, iTerm 2 is basically a better
+version of the default macOS terminal. There’s a whole host of nice features,
+but the main reason I use iTerm 2 over Terminal.app is because of split panes.
+Terminal.app only supports split panes of the same shell, whereas you can
+basically have different shells (like new tabs) but in the same window with
+iTerm 2. It sounds like a small thing, but it can make a fairly big difference
+in terms of productivity for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-better-shell&quot;&gt;A better shell&lt;/h3&gt;
+&lt;p&gt;You’ll probably start with the &lt;a href=&quot;https://en.wikipedia.org/wiki/Bash_(Unix_shell)&quot;&gt;bash
+shell&lt;/a&gt; by default, which again
+is fine. But stuff like Zsh (which I’ve tried) and Fish (which I haven’t)
+feature many small quality-of-life tweaks that make things easier. For Zsh,
+there’s the &lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;Oh My Zsh&lt;/a&gt; framework
+that makes it really easy to extend the functionality of zsh (much like
+&lt;a href=&quot;/2017/08/22/configuration.html&quot;&gt;configuring Vim, actually&lt;/a&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;a-better-set-of-colors&quot;&gt;A better set of colors&lt;/h3&gt;
+&lt;p&gt;Terminal starts with a black on white color scheme. It’s fine.&lt;/p&gt;
+
+&lt;p&gt;I use the &lt;a href=&quot;http://ethanschoonover.com/solarized&quot;&gt;Solarized Dark colorscheme&lt;/a&gt;.
+It’s better (for me at least). There’s a million different color schemes out
+there, and installation is generally pretty easy so you can play around with a
+couple.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">The standard terminal that comes with macOS and most Linux distros is fine (by the way, Command Prompt for Windows is not). But why settle for fine, when you can get something even better?</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+  
+    <entry>
+      
+      <title type="html">Configuration, part 1</title>
+      
+      <link href="http://jerryjrchen.com/2017/08/22/configuration/" rel="alternate" type="text/html" title="Configuration, part 1" />
+      <published>2017-08-22T00:00:00+00:00</published>
+      <updated>2017-08-22T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2017/08/22/configuration</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2017/08/22/configuration/">&lt;p&gt;Development configs can be a surprisingly divisive topic (tabs vs spaces, Vim vs
+Emacs, etc.). To some extent, this doesn’t really matter – as long you’re
+comfortable and productive with your tools, no one should care what you’re using
+(and yes, I’m guilty of bugging people about their config).&lt;/p&gt;
+
+&lt;p&gt;I have a &lt;a href=&quot;/cs61a/setup&quot;&gt;setup page&lt;/a&gt; that recommends a mishmash of different
+tools, but doesn’t really go much in depth on why I chose what I chose. This is
+for a few reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;That stuff is boring, especially if you aren’t looking for it.&lt;/li&gt;
+  &lt;li&gt;Actually, really just reason #1.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I figure if you’re still reading this, then reason #1 doesn’t apply, so I might
+as well take this opportunity to describe the reasoning behind the choices. And
+even after ~4 years of coding, I still find lots of things to tweak in my
+development configuration. So while this is still relevant, I hope it helps
+someone out there.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-vim-instead-of-any-other-text-editor&quot;&gt;Why Vim instead of Any Other Text Editor&lt;/h3&gt;
+&lt;p&gt;To me, Vim is centered around one big idea: &lt;strong&gt;keyboards are faster than the
+mouse/trackpad/etc., so stay on the keyboard.&lt;/strong&gt; In practice, this also means
+that there’s less frustration with doing what traditionally might be mouse-based
+gestures: drag and select, cursor placement, etc.&lt;/p&gt;
+
+&lt;p&gt;The learning curve is a bit steep. But once you get used to keyboard navigation,
+it’s &lt;a href=&quot;https://github.com/gggritso/Vimmy.safariextension&quot;&gt;incredibly addictive&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-neovim-instead-of-vim&quot;&gt;Why Neovim instead of Vim&lt;/h3&gt;
+&lt;p&gt;I initially switched to Neovim since I wanted async support. There’s some
+completion/build plugins that can really slow you down if you run synchronously.
+Vim 8 seems to have this now. But Neovim has more active community involvement
+among many other benefits, and there is &lt;a href=&quot;https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/#ref_1&quot;&gt;no shortage of pages comparing the
+two&lt;/a&gt; if
+you care to look.&lt;/p&gt;
+
+&lt;h3 id=&quot;configuring-vim-or-neovim&quot;&gt;Configuring Vim (or Neovim)&lt;/h3&gt;
+&lt;p&gt;I’m going to refer to both Vim and Neovim as just Vim from now on, since much
+of the configuration for a beginning user is similar. I’m not going to talk
+about what’s in my Vim config file (aka vimrc or init.vim). There are
+&lt;a href=&quot;http://spf13.com/post/perfect-vimrc-vim-config-file/&quot;&gt;many useful examples of vimrcs online&lt;/a&gt;,
+but &lt;strong&gt;blindy copying someone else’s config is the wrong way to go&lt;/strong&gt;.
+The same thing goes for installing plugins. Just copying someone else’s setup
+won’t be that useful to you. Instead, here’s what I would recommend.&lt;/p&gt;
+
+&lt;p&gt;You can do a lot with Vim out of the box. Very quickly however, you will
+realize there’s some “missing” feature. Let’s say you want line numbers, syntax
+highlighting, etc. (it helps to have a little bit of experience with IDEs).
+These are things that are easy to add to your Vim config, piece by piece.
+For more complicated things, like completion or file navigation, having a good
+&lt;a href=&quot;https://github.com/junegunn/vim-plug&quot;&gt;plugin manager&lt;/a&gt; makes it easy to steadily
+augment your configuration as well.&lt;/p&gt;
+
+&lt;p&gt;In this way, your version of Vim naturally evolves to fit your needs, something
+you can’t really get from reading some blog post. That being said, there are
+some &lt;a href=&quot;https://dougblack.io/words/a-good-vimrc.html&quot;&gt;pretty good ones&lt;/a&gt; out there
+that &lt;em&gt;do&lt;/em&gt; explain what you’re about to copy paste.&lt;/p&gt;
+
+&lt;p&gt;I’m sure there’s some deep metaphor about life and minimalism here. But that’s
+probably enough for one post.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Development configs can be a surprisingly divisive topic (tabs vs spaces, Vim vs Emacs, etc.). To some extent, this doesn’t really matter – as long you’re comfortable and productive with your tools, no one should care what you’re using (and yes, I’m guilty of bugging people about their config).</summary>
+      
+
+      
+      
+    </entry>
+  
+  
+</feed>

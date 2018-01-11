@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Configuration, part 1</title>
+  <meta name="description" content="Vim (or rather, Neovim)">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/2017/08/22/configuration/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Configuration, part 1">
+  <meta name="twitter:description" content="Vim (or rather, Neovim)">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Configuration, part 1</h1>
+    
+    <h3>Vim (or rather, Neovim)</h3>
+    
+    <p class="post-meta"><time datetime="2017-08-22T00:00:00+00:00" itemprop="datePublished">Aug 22, 2017</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Development configs can be a surprisingly divisive topic (tabs vs spaces, Vim vs
+Emacs, etc.). To some extent, this doesn’t really matter – as long you’re
+comfortable and productive with your tools, no one should care what you’re using
+(and yes, I’m guilty of bugging people about their config).</p>
+
+<p>I have a <a href="/cs61a/setup">setup page</a> that recommends a mishmash of different
+tools, but doesn’t really go much in depth on why I chose what I chose. This is
+for a few reasons:</p>
+
+<ol>
+  <li>That stuff is boring, especially if you aren’t looking for it.</li>
+  <li>Actually, really just reason #1.</li>
+</ol>
+
+<p>I figure if you’re still reading this, then reason #1 doesn’t apply, so I might
+as well take this opportunity to describe the reasoning behind the choices. And
+even after ~4 years of coding, I still find lots of things to tweak in my
+development configuration. So while this is still relevant, I hope it helps
+someone out there.</p>
+
+<h3 id="why-vim-instead-of-any-other-text-editor">Why Vim instead of Any Other Text Editor</h3>
+<p>To me, Vim is centered around one big idea: <strong>keyboards are faster than the
+mouse/trackpad/etc., so stay on the keyboard.</strong> In practice, this also means
+that there’s less frustration with doing what traditionally might be mouse-based
+gestures: drag and select, cursor placement, etc.</p>
+
+<p>The learning curve is a bit steep. But once you get used to keyboard navigation,
+it’s <a href="https://github.com/gggritso/Vimmy.safariextension">incredibly addictive</a>.</p>
+
+<h3 id="why-neovim-instead-of-vim">Why Neovim instead of Vim</h3>
+<p>I initially switched to Neovim since I wanted async support. There’s some
+completion/build plugins that can really slow you down if you run synchronously.
+Vim 8 seems to have this now. But Neovim has more active community involvement
+among many other benefits, and there is <a href="https://geoff.greer.fm/2015/01/15/why-neovim-is-better-than-vim/#ref_1">no shortage of pages comparing the
+two</a> if
+you care to look.</p>
+
+<h3 id="configuring-vim-or-neovim">Configuring Vim (or Neovim)</h3>
+<p>I’m going to refer to both Vim and Neovim as just Vim from now on, since much
+of the configuration for a beginning user is similar. I’m not going to talk
+about what’s in my Vim config file (aka vimrc or init.vim). There are
+<a href="http://spf13.com/post/perfect-vimrc-vim-config-file/">many useful examples of vimrcs online</a>,
+but <strong>blindy copying someone else’s config is the wrong way to go</strong>.
+The same thing goes for installing plugins. Just copying someone else’s setup
+won’t be that useful to you. Instead, here’s what I would recommend.</p>
+
+<p>You can do a lot with Vim out of the box. Very quickly however, you will
+realize there’s some “missing” feature. Let’s say you want line numbers, syntax
+highlighting, etc. (it helps to have a little bit of experience with IDEs).
+These are things that are easy to add to your Vim config, piece by piece.
+For more complicated things, like completion or file navigation, having a good
+<a href="https://github.com/junegunn/vim-plug">plugin manager</a> makes it easy to steadily
+augment your configuration as well.</p>
+
+<p>In this way, your version of Vim naturally evolves to fit your needs, something
+you can’t really get from reading some blog post. That being said, there are
+some <a href="https://dougblack.io/words/a-good-vimrc.html">pretty good ones</a> out there
+that <em>do</em> explain what you’re about to copy paste.</p>
+
+<p>I’m sure there’s some deep metaphor about life and minimalism here. But that’s
+probably enough for one post.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

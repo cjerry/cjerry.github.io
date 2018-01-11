@@ -1,14 +1,99 @@
----
-layout: page
-title: Development Setup
-permalink: cs61a/setup/
-category: cs61a
-tag: current
----
-<p>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Development Setup</title>
+  <meta name="description" content="Jerry Chen&#39;s website">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/cs61a/setup/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Development Setup">
+  <meta name="twitter:description" content="Jerry Chen&#39;s website">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Development Setup</h1>
+  </header>
+
+  <div class="post-content">
+    <p>
 This is a short list of tools that I think are worth the trouble to set up. If
 you enjoy reading about configurations, I've written some more
-<a href="{{ site.url }}/2017/08/22/configuration/">detailed explanations</a>
+<a href="http://jerryjrchen.com/2017/08/22/configuration/">detailed explanations</a>
 of what (not) to do.
 </p>
 
@@ -20,60 +105,221 @@ have one.
 </p>
 
 <!-- Editors -->
-{% for e in site.data.cs61a.setup.editors %}
+
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ e.name }}</h3>
+    <h3 class="panel-title">Neovim</h3>
   </div>
   <div class="panel-body">
-    {% for p in e.info %}
+    
     <p>
-    {{ p }}
+    Neovim is the future of Vim. It comes with some sane defaults and extends default Vim functionality to make it better. Here's why you should use Vim at all.
     </p>
-    {% endfor %}
-    {% for l in e.links %}
-    <a href="{{ l.link }}" class="btn btn-raised btn-primary"><span class="btn-primary"><i class="fa {{ l.icon }}"></i> {{ l.text }}</span></a>
-    {% endfor %}
+    
+    <p>
+    Fun fact - Vim is a clone of Vi, which was written by Berkeley alum and programming superstar Bill Joy.
+    </p>
+    
+    <p>
+    <b>Pros:</b> Fast and addictive. Feature rich, but you only need to learn a minimal amount to become productive. You'll also look cool doing it. 🙃
+    </p>
+    
+    <p>
+    <b>Cons:</b> Steep learning curve. Customization is required to unlock many nice features that are default in other editors.
+    </p>
+    
+    
+    <a href="https://neovim.io" class="btn btn-raised btn-primary"><span class="btn-primary"><i class="fa fa-download"></i> Neovim</span></a>
+    
+    <a href="http://www.vim.org/download.php" class="btn btn-raised btn-primary"><span class="btn-primary"><i class="fa fa-download"></i> Vim</span></a>
+    
   </div>
 </div>
-{% endfor %}
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Atom</h3>
+  </div>
+  <div class="panel-body">
+    
+    <p>
+    With a built in package manager, Atom is incredibly easy to customize (like the extension manager for your favorite web browser, but arguably better). On top of that, sensible default packages are installed as well!
+    </p>
+    
+    <p>
+    <b>Pros:</b> Easy to use and customize.
+    </p>
+    
+    <p>
+    <b>Cons:</b> In the editor world, Atom is relatively new. There are still some bugs that need to be sorted out, and many packages could use significant improvement.
+    </p>
+    
+    
+    <a href="https://atom.io" class="btn btn-raised btn-primary"><span class="btn-primary"><i class="fa fa-download"></i> </span></a>
+    
+  </div>
+</div>
+
 
 <!-- Terminal -->
-{% for t in site.data.cs61a.setup.terminals %}
+
 <div class="panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ t.name }}</h3>
+    <h3 class="panel-title">iTerm2</h3>
   </div>
   <div class="panel-body">
-    {% for p in t.info %}
+    
     <p>
-    {{ p }}
+    As far as I'm concerned, this is basically a better version of terminal that ships with macOS.
     </p>
-    {% endfor %}
-    {% for l in t.links %}
-    <a href="{{ l.link }}" class="btn btn-raised btn-success"><span class="btn-success"><i class="fa {{ l.icon }}"></i> {{ l.text }}</span></a>
-    {% endfor %}
+    
+    <p>
+    <b>Pros:</b> Just look at this <a href="https://www.iterm2.com/features.html">beautiful list of features</a>.
+    </p>
+    
+    <p>
+    <b>Cons:</b> macOS only.
+    </p>
+    
+    
+    <a href="https://www.iterm2.com" class="btn btn-raised btn-success"><span class="btn-success"><i class="fa fa-apple"></i> </span></a>
+    
   </div>
 </div>
-{% endfor %}
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Babun</h3>
+  </div>
+  <div class="panel-body">
+    
+    <p>
+    Babun is probably the best Windows shell I've used. It comes built in with <a href="http://ohmyz.sh/">oh my zsh</a> (z shell) which is usually a bit of a hassle to install on Windows.
+    </p>
+    
+    <p>
+    <b>Pros:</b> Comes built in with a package manager which beats whatever mess Cygwin and GitBash have.
+    </p>
+    
+    <p>
+    <b>Cons:</b> There are some potentially annoying defaults that you have to manually disable (for example, a self-check on startup). And... it still uses Mintty, which means no tabs, minimal window configuration, etc.
+    </p>
+    
+    
+    <a href="http://babun.github.io/" class="btn btn-raised btn-success"><span class="btn-success"><i class="fa fa-windows"></i> </span></a>
+    
+  </div>
+</div>
+
 
 <!-- Miscellaneous -->
 <a id="packagemanager" class="anchor"></a>
 
-{% for m in site.data.cs61a.setup.misc %}
+
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ m.name }}</h3>
+    <h3 class="panel-title">Homebrew</h3>
   </div>
   <div class="panel-body">
-    {% for p in m.info %}
+    
     <p>
-    {{ p }}
+    Package manager for macOS. In a nutshell, package managers make it easy for developers to install software and keep it up to date. Lots of command line applications are installable through Homebrew, and Homebrew Cask allows you to install macOS applications as well!
     </p>
-    {% endfor %}
-    {% for l in m.links %}
-    <a href="{{ l.link }}" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa {{ l.icon }}"></i> {{ l.text }}</span></a>
-    {% endfor %}
+    
+    
+    <a href="http://brew.sh/" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa fa-apple"></i> </span></a>
+    
+    <a href="https://caskroom.github.io/" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa fa-apple"></i> Cask</span></a>
+    
   </div>
 </div>
-{% endfor %}
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Chocolatey</h3>
+  </div>
+  <div class="panel-body">
+    
+    <p>
+    For the sake of completeness, here's a package manager for Windows. I've never used it, however.
+    </p>
+    
+    
+    <a href="https://chocolatey.org/install" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa fa-windows"></i> </span></a>
+    
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Oh My Zsh</h3>
+  </div>
+  <div class="panel-body">
+    
+    <p>
+    Replace the default shell with Zsh, extended with many useful plugins. Highly customizable and features some pretty nifty themes as well.
+    </p>
+    
+    <p>
+    Oh My Zsh is installable on Windows, but it requires some extra details.
+    </p>
+    
+    
+    <a href="http://ohmyz.sh/" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa fa-download"></i> </span></a>
+    
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Git</h3>
+  </div>
+  <div class="panel-body">
+    
+    <p>
+    Git is a version control system which basically lets you save snapshots of your code.
+    </p>
+    
+    <p>
+    The real beauty of Git is that it allows you to fearlessly experiment with new ideas. It might take a while to learn, but it will only be more prevalent later on in school & work!
+    </p>
+    
+    
+    <a href="https://git-scm.com/download/" class="btn btn-raised btn-info"><span class="btn-info"><i class="fa fa-download"></i> </span></a>
+    
+  </div>
+</div>
+
+
+  </div>
+
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

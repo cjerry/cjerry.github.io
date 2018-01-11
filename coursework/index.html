@@ -1,9 +1,96 @@
----
-layout: page
-title: Coursework
-category: personal
----
-<table class="table table-striped table-hover">
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Coursework</title>
+  <meta name="description" content="Jerry Chen&#39;s website">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/coursework/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Coursework">
+  <meta name="twitter:description" content="Jerry Chen&#39;s website">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Coursework</h1>
+  </header>
+
+  <div class="post-content">
+    <table class="table table-striped table-hover">
   <thead>
   <tr>
     <th>Course</th>
@@ -12,19 +99,183 @@ category: personal
   </tr>
   </thead>
   <tbody>
-    {% for c in site.data.courses %}
-    {% assign color = nil %}
-    {% if c.type == 'CS' %}
-      {% assign color = 'info' %}
-    {% endif %}
-    {% if c.type == 'EE' %}
-      {% assign color = 'warning' %}
-    {% endif %}
-    <tr class="{{ color }}">
-      <td>{{ c.course }}</td>
-      <td>{{ c.title }}</td>
-      <td>{{ c.instructor }}</td>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 61A</td>
+      <td>Structure and Interpretation of Computer Programs</td>
+      <td>John DeNero</td>
     </tr>
-    {% endfor %}
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 61B</td>
+      <td>Data Structures</td>
+      <td>Joshua Hug</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 61C</td>
+      <td>Great Ideas in Computer Architecture</td>
+      <td>John Wawrzynek, Vladimir Stojanovic</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 70</td>
+      <td>Discrete Mathematics and Probability</td>
+      <td>Umesh Vazirani</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 170</td>
+      <td>Efficient Algorithms and Intractable Problems</td>
+      <td>Prasad Raghavendra, Sanjam Garg</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 162</td>
+      <td>Operating Systems and Systems Programming</td>
+      <td>Anthony Joseph</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 161</td>
+      <td>Computer Security</td>
+      <td>David Wagner, Raluca Ada Popa</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 188</td>
+      <td>Artificial Intelligence</td>
+      <td>Joshua Hug, Adam Janin</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 168</td>
+      <td>Internet Architecture and Networking</td>
+      <td>Scott Shenker</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 164</td>
+      <td>Programming Languages and Compilers</td>
+      <td>Koushik Sen</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 267</td>
+      <td>Applications of Parallel Computers</td>
+      <td>Kathy Yelick, Aydin Buluc</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="info">
+      <td>CS 186</td>
+      <td>Database Systems</td>
+      <td>Joseph Hellerstein</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="warning">
+      <td>EE 16A</td>
+      <td>Designing Information Devices and Systems I</td>
+      <td>Anant Sahai, Ali Niknejad</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="warning">
+      <td>EE 16B</td>
+      <td>Designing Information Devices and Systems II</td>
+      <td>Anant Sahai, Michel Maharbiz</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="warning">
+      <td>EE 120</td>
+      <td>Signals and Systems</td>
+      <td>Ronald Fearing</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="warning">
+      <td>EE 127</td>
+      <td>Optimization Models in Engineering</td>
+      <td>Giuseppe Calafiore</td>
+    </tr>
+    
   </tbody>
 </table>
+
+  </div>
+
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
