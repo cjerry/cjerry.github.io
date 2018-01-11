@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Redesign - A Postmortem</title>
+  <meta name="description" content="Part 1: local issues">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/2018/01/11/redesign/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Redesign - A Postmortem">
+  <meta name="twitter:description" content="Part 1: local issues">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Redesign - A Postmortem</h1>
+    
+    <h3>Part 1: local issues</h3>
+    
+    <p class="post-meta"><time datetime="2018-01-11T00:00:00+00:00" itemprop="datePublished">Jan 11, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <blockquote>
+  <p>If you’re curious, an archived version of my website is on the <a href="https://web.archive.org/web/20170911171546/http://jerryjrchen.com/">Wayback
+Machine</a>.</p>
+</blockquote>
+
+<p>The starting point:
+<img src="http://jerryjrchen.com/assets/posts/before.png" alt="before" /></p>
+
+<p>Here’s some problems I was having with my old website:</p>
+<ul>
+  <li>I was tired of the aesthetic. The material design setup just felt out of
+place, and I wanted to go to something even simpler.</li>
+  <li>The CSS was a mess. On top of importing two separate bootstrap
+libraries, I overlay a bunch of my own CSS on top. Starting fresh would
+be a good chance to clean this up.</li>
+  <li>The color usage was inconsistent for key elements. Here’s a list of the
+colors:
+    <ul>
+      <li>Teal for the hero (landing).</li>
+      <li>Blue for the navbar.</li>
+      <li>A different blue for one of the past semester CS 61A pages.</li>
+      <li>Black for an old navbar.</li>
+      <li>Another blue and red for the favicon.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>I had a few goals in mind when planning this redesign (roughly in order of
+decreasing priority):</p>
+<ul>
+  <li><strong>An even simpler, more accessible student facing resource page.</strong> This
+actually ended up not being too difficult. This would likely help with
+cleaning up the CSS mess. As an added “bonus”, I would also be changing
+the aesthetic for the rest of the website.</li>
+  <li><strong>Fewer, better pages.</strong> This didn’t mean having a one-pager website,
+but I felt like there were too many pages doing nothing. Also,
+collecting all the past CS 61A content into one page would be really
+nice.</li>
+  <li><strong>Better automation.</strong> This wasn’t an initial goal, but ended up being
+something I decided to add partway into the design process.</li>
+</ul>
+
+<h2 id="first-steps">First Steps</h2>
+<p>I really liked the benefits of Jekyll for my site, so I wanted to keep
+using it. The ability to write markdown as well as use a template engine
+makes it really easy to avoid HTML, the worst part of web development (I’m
+kidding about HTML, but only a little bit). As I would soon find out,
+Jekyll + GitHub Pages still had a few unpleasant surprises in store.</p>
+
+<p>I decided to look around for themes, and found that
+<a href="https://github.com/yous/whiteglass">whiteglass</a> met my needs quite well.
+Installing a Jekyll theme is super easy, and the process for customization
+has been well thought out. The benefit of using a simple theme like
+whiteglass is that it’s really easy to add or remove page elements without
+having them stick out like a sore thumb.</p>
+
+<p>Adding my content and adjusting for this new theme went by mostly without
+issues. There was a bit of a small learning curve in getting used to
+working with templates, but nothing that I couldn’t easily look up online.</p>
+
+<p>Oh yeah. I guess pagination doesn’t work. Look at this sadness:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paginate</span><span class="pi">:</span> <span class="s">9999</span> <span class="c1"># TODO: pagination is broken</span>
+</code></pre></div></div>
+
+<h2 id="dark-theme">Dark Theme?</h2>
+<p>I use dark theme for most of my code related things
+(editors/terminals/etc.). I was curious how well this would translate to a
+website, and experimented with it a bit at this point. But sadly, the
+evidence seems to suggest that <a href="https://graphicdesign.stackexchange.com/a/34925">dark text on a light background is more
+visible</a>.</p>
+
+<h2 id="piling-on-the-imports">Piling on the Imports</h2>
+<p>I needed to add Bootstrap and Font Awesome for some the page elements I
+wanted to keep from the old website. The advice on
+<a href="https://stackoverflow.com/a/28737999/6469972">StackOverflow</a> I found
+suggests using Bower. So I did:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bower install bootstrap-sass
+bower cached        https://github.com/twbs/bootstrap-sass.git#3.3.7
+
+... &lt;lines omitted&gt;
+
+jquery#3.2.1 bower_components/jquery
+
+
+   ╭─────────────────────────────────────╮
+   │                                     │
+   │   Update available 1.7.9 → 1.8.2    │
+   │   Run npm i <span class="nt">-g</span> bower to update      │
+   │                                     │
+   ╰─────────────────────────────────────╯
+</code></pre></div></div>
+<p>Huh, guess I’d better update.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm i <span class="nt">-g</span> bower
+npm WARN deprecated bower@1.8.2: ...psst! Your project can stop working at any moment because its dependencies can change. Prevent this by migrating to Yarn: https://bower.io/blog/2017/how-to-migrate-away-from-bower/
+/usr/local/bin/bower -&gt; /usr/local/lib/node_modules/bower/bin/bower
++ bower@1.8.2
+updated 1 package <span class="k">in </span>5.391s
+</code></pre></div></div>
+<p>Well, that doesn’t sound good. What’s a Yarn, anyways?</p>
+
+<h3 id="yarn-and-node_modules">Yarn and <code class="highlighter-rouge">node_modules</code></h3>
+<p>As it turns out, Yarn isn’t exactly a perfect replacement for Bower. This
+seems pretty minor, but Yarn installs to <code class="highlighter-rouge">node_modules</code> instead of
+<code class="highlighter-rouge">bower_components</code>. I happen to want to directly include these folders in
+my final website (yes, building them on the fly is probably a better
+idea). Why does this matter?</p>
+
+<h3 id="a-brief-rant-jekyll-and-default-excludes">A brief rant: Jekyll and default excludes</h3>
+<p>It turns out that Jekyll excludes <code class="highlighter-rouge">node_modules</code> by default. As of time of
+writing, this doesn’t appear to be documented anywhere (grumble grumble).</p>
+
+<p>The only thing I could find was this <a href="https://github.com/jekyll/jekyll/pull/5210">pull
+request</a>, where commenters
+happily note that their builds have been sped up by this change. While
+combining Jekyll with Yarn in this way might not have been standard, it
+would have been really nice if this consequences of this change were
+easier to find (ironically, someone even states that this change will
+“solve a lot of user pains”).</p>
+
+<p>I can’t even find anything about default excludes on the Jekyll website
+anywhere. Sure, it’s mentioned in the <a href="https://jekyllrb.com/docs/history/#v3-3-0">changelog for
+v3.3.0</a>. But the page is
+(perhaps rightfully) excluded from the website search as well as search
+engine results.</p>
+
+<p>In fact, the thing that tipped me off to this problem was <a href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/"><em>GitHub’s</em> own
+help pages</a>,
+which happens to mention:</p>
+
+<blockquote>
+  <p>By default, Jekyll does not build any files or directories that</p>
+
+  <ul>
+    <li>are hidden or used for backup (indicated by names that start with . or
+      &gt;   #, or that end with ~);</li>
+    <li>contain site content (indicated by names that start with _); or</li>
+    <li>are excluded in the site configuration.</li>
+  </ul>
+</blockquote>
+
+<p>Note that this still conveniently doesn’t mention <code class="highlighter-rouge">node_modules</code>. 🙃.</p>
+
+<p>One last kicker: <code class="highlighter-rouge">_config.yml</code> offers an “include” option, which is
+supposed to “force inclusion of directories and/or files”. Guess what? It
+doesn’t work for <code class="highlighter-rouge">node_modules</code>.</p>
+
+<h2 id="new-favicons">New Favicons</h2>
+<p>Ah, might as well. I initially used GIMP for pixel art, but decided to try
+making an SVG this time around (since Safari requires an <a href="https://yoast.com/dev-blog/safari-pinned-tab-icon-mask-icon/">SVG
+image</a> for
+the pinned tab icon). So far, so good.</p>
+
+<p>For creating the actual favicon, I tried using
+<a href="https://realfavicongenerator.net">realfavicongenerator.net</a>. This creates
+the favicon easily enough. However, the favicon has to be scaled to many
+different sizes, and the website does some really ugly interpolation for
+simple favicons like mine.</p>
+
+<p><img src="http://jerryjrchen.com/assets/posts/blurry-favicon.png" alt="blurry favicon" /></p>
+
+<p>I exported the different-sized bitmaps manually through GIMP. GIMP also
+lets you create the
+<a href="https://stackoverflow.com/a/10819673/6469972"><code class="highlighter-rouge">favicon.ico</code></a> file which
+combines many different sized icons.</p>
+
+<h2 id="the-next-step">The next step</h2>
+<p>Ok, so everything has been prepped locally. <code class="highlighter-rouge">jekyll serve</code> seems to work
+without issue. What could possibly go wrong when deploying to GitHub
+pages?</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
