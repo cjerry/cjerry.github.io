@@ -22,7 +22,11 @@ sass:
     - _scss
   style: compressed
 
-exclude: [] # Need to keep node_modules
+exclude: # Need to keep node_modules
+  - Gemfile
+  - Gemfile.lock
+  - yarn.lock
+  - package.json
 
 # Build settings
 markdown: kramdown
