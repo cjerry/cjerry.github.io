@@ -16,7 +16,7 @@ deploy:
   target-branch: master
 
 script:
-  - rm -r _site/*
+  - if [ -d "_site" ]; then rm -r _site; fi
   - bundle exec jekyll build
 
 branches:
