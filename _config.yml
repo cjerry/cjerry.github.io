@@ -22,6 +22,9 @@ sass:
     - _scss
   style: compressed
 
+include:
+  - .nojekyll # Otherwise, GH pages scraps node_modules
+
 exclude: # Need to keep node_modules
   - Gemfile
   - Gemfile.lock
