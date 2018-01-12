@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Redesign - A Postmortem</title>
+  <meta name="description" content="Part 2: &#39;but it worked locally!&#39;">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/2018/01/12/redesign/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Redesign - A Postmortem">
+  <meta name="twitter:description" content="Part 2: &#39;but it worked locally!&#39;">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Redesign - A Postmortem</h1>
+    
+    <h3>Part 2: 'but it worked locally!'</h3>
+    
+    <p class="post-meta"><time datetime="2018-01-12T00:00:00+00:00" itemprop="datePublished">Jan 12, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="building-on-github-pages">Building on GitHub Pages</h2>
+<p>So, something I didn’t know about GitHub pages. It doesn’t really support
+custom Jekyll themes. Sure, there’s the <a href="https://pages.github.com/themes/">list
+here</a> of officially supported themes. If
+only I knew about them <em>before</em> I picked a theme…</p>
+
+<p>Nevertheless, I tried to push my website with this custom theme. While
+everything builds fine locally (I’m even using the GitHub Pages gem),
+GitHub Pages would refuse to build my website with the theme. It’s
+supposed to work if you specify <code class="highlighter-rouge">remote_theme:</code> in <code class="highlighter-rouge">_config.yml</code>.</p>
+
+<p>You’ll never guess what happens.
+<img src="http://jerryjrchen.com/assets/posts/gh-pages-build.png" alt="GitHub Pages builds weird" />
+What the heck is that?</p>
+
+<h2 id="changing-to-travis-ci">Changing to Travis CI</h2>
+<p>After spending a few hours on trying to fix all the build errors (it’s
+really annoying to debug over email as you might imagine), I didn’t have
+any patience left for trying to work around GitHub Pages. After looking at
+some examples of other websites on GitHub, I decided to move to using
+Travis CI.</p>
+
+<h3 id="changing-branches">Changing branches</h3>
+<p>I pushed the website source onto a new “source” branch. “master” would be
+reserved for just build products (the contents of <code class="highlighter-rouge">_site</code> essentially).
+After that, setting up Travis CI was fairly straightforward.</p>
+
+<blockquote>
+  <p>A side note on Travis settings:</p>
+  <ul>
+    <li>Travis will try to build if it detects changes to any branch, even if
+it doesn’t have a <code class="highlighter-rouge">.travis.yml</code> file. This can be changed from the
+settings on the Travis website. Too late for me though – I now have a
+random build failed on my master branch. ☹️
+<img src="http://jerryjrchen.com/assets/posts/master-build.png" alt="master tries to build" /></li>
+    <li>There’s an option for <code class="highlighter-rouge">.travis.yml</code> to restrict builds to specific
+branches. As you might guess, this is useless if you don’t have a
+<code class="highlighter-rouge">.travis.yml</code> on a given branch (like master).</li>
+  </ul>
+</blockquote>
+
+<h2 id="the-final-stretch">The Final Stretch</h2>
+<p>Are we done? Wait, Font Awesome isn’t loading…
+<img src="http://jerryjrchen.com/assets/posts/no-font-awesome.png" alt="no font awesome" /></p>
+
+<h3 id="darn-it">Darn it</h3>
+<p>Oh yeah, GitHub will still try to build my web page using Jekyll so
+<code class="highlighter-rouge">node_modules</code> is lost. Better include a <code class="highlighter-rouge">.nojekyll</code> file.</p>
+
+<h2 id="finished">Finished?</h2>
+<p>There’s still a lot to do:</p>
+<ul>
+  <li>Pagination is quite broken (though there are very few posts so
+whatever).</li>
+  <li>Adding tags and categories for posts might be nice.</li>
+  <li>The Travis build is extremely barebones at the moment.</li>
+  <li>More automation for creating new posts and adding new CS 61A content
+would be a nice to have, but definitely not essential. Maybe look into
+<code class="highlighter-rouge">rake</code>?</li>
+  <li>I should figure out something better than copying over my <code class="highlighter-rouge">node_modules</code>
+folder to the website.</li>
+</ul>
+
+<p>However, I’m much happier with the new site compared to the old site. Not
+bad for less than one week worth of effort!</p>
+
+<h2 id="and-of-course-a-summary">And of course, a summary</h2>
+<ul>
+  <li>Changing to Travis CI rather than depending on GitHub Pages to build
+everything definitely required some effort, but has made debugging a lot
+easier. Honestly though, getting started with Travis was a lot easier
+than I expected.</li>
+  <li>Documentation for certain aspects of GitHub Pages and Jekyll is
+disappointingly scarce. Part of the reason I wrote all this down was for
+future me in case I ran into these issues again.</li>
+  <li>Writing HTML still isn’t fun. But Markdown is bearable.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

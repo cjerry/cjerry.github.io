@@ -5,7 +5,7 @@
   
   <link href="http://jerryjrchen.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://jerryjrchen.com/" rel="alternate" type="text/html" />
-  <updated>2018-01-12T01:53:41+00:00</updated>
+  <updated>2018-01-12T23:43:06+00:00</updated>
   <id>http://jerryjrchen.com//</id>
 
   
@@ -19,6 +19,114 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">Redesign - A Postmortem</title>
+      
+      <link href="http://jerryjrchen.com/2018/01/12/redesign/" rel="alternate" type="text/html" title="Redesign - A Postmortem" />
+      <published>2018-01-12T00:00:00+00:00</published>
+      <updated>2018-01-12T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2018/01/12/redesign</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2018/01/12/redesign/">&lt;h2 id=&quot;building-on-github-pages&quot;&gt;Building on GitHub Pages&lt;/h2&gt;
+&lt;p&gt;So, something I didn’t know about GitHub pages. It doesn’t really support
+custom Jekyll themes. Sure, there’s the &lt;a href=&quot;https://pages.github.com/themes/&quot;&gt;list
+here&lt;/a&gt; of officially supported themes. If
+only I knew about them &lt;em&gt;before&lt;/em&gt; I picked a theme…&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, I tried to push my website with this custom theme. While
+everything builds fine locally (I’m even using the GitHub Pages gem),
+GitHub Pages would refuse to build my website with the theme. It’s
+supposed to work if you specify &lt;code class=&quot;highlighter-rouge&quot;&gt;remote_theme:&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You’ll never guess what happens.
+&lt;img src=&quot;http://jerryjrchen.com/assets/posts/gh-pages-build.png&quot; alt=&quot;GitHub Pages builds weird&quot; /&gt;
+What the heck is that?&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-to-travis-ci&quot;&gt;Changing to Travis CI&lt;/h2&gt;
+&lt;p&gt;After spending a few hours on trying to fix all the build errors (it’s
+really annoying to debug over email as you might imagine), I didn’t have
+any patience left for trying to work around GitHub Pages. After looking at
+some examples of other websites on GitHub, I decided to move to using
+Travis CI.&lt;/p&gt;
+
+&lt;h3 id=&quot;changing-branches&quot;&gt;Changing branches&lt;/h3&gt;
+&lt;p&gt;I pushed the website source onto a new “source” branch. “master” would be
+reserved for just build products (the contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;_site&lt;/code&gt; essentially).
+After that, setting up Travis CI was fairly straightforward.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A side note on Travis settings:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Travis will try to build if it detects changes to any branch, even if
+it doesn’t have a &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; file. This can be changed from the
+settings on the Travis website. Too late for me though – I now have a
+random build failed on my master branch. ☹️
+&lt;img src=&quot;http://jerryjrchen.com/assets/posts/master-build.png&quot; alt=&quot;master tries to build&quot; /&gt;&lt;/li&gt;
+    &lt;li&gt;There’s an option for &lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; to restrict builds to specific
+branches. As you might guess, this is useless if you don’t have a
+&lt;code class=&quot;highlighter-rouge&quot;&gt;.travis.yml&lt;/code&gt; on a given branch (like master).&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;the-final-stretch&quot;&gt;The Final Stretch&lt;/h2&gt;
+&lt;p&gt;Are we done? Wait, Font Awesome isn’t loading…
+&lt;img src=&quot;http://jerryjrchen.com/assets/posts/no-font-awesome.png&quot; alt=&quot;no font awesome&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;darn-it&quot;&gt;Darn it&lt;/h3&gt;
+&lt;p&gt;Oh yeah, GitHub will still try to build my web page using Jekyll so
+&lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; is lost. Better include a &lt;code class=&quot;highlighter-rouge&quot;&gt;.nojekyll&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;finished&quot;&gt;Finished?&lt;/h2&gt;
+&lt;p&gt;There’s still a lot to do:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pagination is quite broken (though there are very few posts so
+whatever).&lt;/li&gt;
+  &lt;li&gt;Adding tags and categories for posts might be nice.&lt;/li&gt;
+  &lt;li&gt;The Travis build is extremely barebones at the moment.&lt;/li&gt;
+  &lt;li&gt;More automation for creating new posts and adding new CS 61A content
+would be a nice to have, but definitely not essential. Maybe look into
+&lt;code class=&quot;highlighter-rouge&quot;&gt;rake&lt;/code&gt;?&lt;/li&gt;
+  &lt;li&gt;I should figure out something better than copying over my &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt;
+folder to the website.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, I’m much happier with the new site compared to the old site. Not
+bad for less than one week worth of effort!&lt;/p&gt;
+
+&lt;h2 id=&quot;and-of-course-a-summary&quot;&gt;And of course, a summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Changing to Travis CI rather than depending on GitHub Pages to build
+everything definitely required some effort, but has made debugging a lot
+easier. Honestly though, getting started with Travis was a lot easier
+than I expected.&lt;/li&gt;
+  &lt;li&gt;Documentation for certain aspects of GitHub Pages and Jekyll is
+disappointingly scarce. Part of the reason I wrote all this down was for
+future me in case I ran into these issues again.&lt;/li&gt;
+  &lt;li&gt;Writing HTML still isn’t fun. But Markdown is bearable.&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Building on GitHub Pages So, something I didn’t know about GitHub pages. It doesn’t really support custom Jekyll themes. Sure, there’s the list here of officially supported themes. If only I knew about them before I picked a theme…</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
