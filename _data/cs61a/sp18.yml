@@ -11,11 +11,11 @@ locations:
     time: TBD
     location: TBD
   - type: Discussion
-    time: TBD
-    location: TBD
+    time: Th 9:30-11am
+    location: 3105 Etcheverry
   - type: Lab
-    time: TBD
-    location: TBD
+    time: Tu 9:30-11am
+    location: 271 Soda
 
 notes:
   - Welcome to CS 61A! [Check in for discussion 0 here](https://v.gd/disc00).
