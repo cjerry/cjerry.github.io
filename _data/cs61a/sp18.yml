@@ -4,12 +4,15 @@ resources:
     downloads:
       - name: Slides
         type: slides
-        link: TODO
+        link: sp18/assets/disc00.pdf
 
 locations:
   - type: Office Hours
-    time: TBD
-    location: TBD
+    time: Th 5-6pm
+    location: 109 Morgan
+  - type: Office Hours
+    time: W 3-4pm
+    location: 109 Morgan
   - type: Discussion
     time: Th 9:30-11am
     location: 3105 Etcheverry
