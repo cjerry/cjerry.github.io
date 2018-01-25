@@ -5,6 +5,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc00.pdf
+  - number: 1
+    description: Control and Environments
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc01.pdf
 
 locations:
   - type: Office Hours
