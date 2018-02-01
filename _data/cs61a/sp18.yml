@@ -11,6 +11,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc01.pdf
+  - number: 2
+    description: Environments and Recursion (+Composition)
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc02.pdf
 
 locations:
   - type: Office Hours
