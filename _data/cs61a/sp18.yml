@@ -17,6 +17,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc02.pdf
+  - number: extra
+    description: Midterm Review
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/mt1_review.pdf
 
 locations:
   - type: Office Hours
