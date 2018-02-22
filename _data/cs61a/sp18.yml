@@ -29,6 +29,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc03.pdf
+  - number: 3
+    description: Nonlocals & Mutation
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc04.pdf
 
 locations:
   - type: Office Hours
