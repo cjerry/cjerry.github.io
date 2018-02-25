@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>A very Pane-ful Presentation</title>
+  <meta name="description" content="Saner terminal demos with tmux">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/2018/02/24/presenting/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="A very Pane-ful Presentation">
+  <meta name="twitter:description" content="Saner terminal demos with tmux">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">jerryjrchen</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/">About</a>
+      
+        
+        <a class="page-link" href="/posts/">Posts</a>
+      
+        
+        <a class="page-link" href="/cs61a/">CS 61A</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">A very Pane-ful Presentation</h1>
+    
+    <h3>Saner terminal demos with tmux</h3>
+    
+    <p class="post-meta"><time datetime="2018-02-24T00:00:00+00:00" itemprop="datePublished">Feb 24, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Credit for this idea goes to this <a href="https://stackoverflow.com/a/30275065">StackOverflow
+answer</a>. I just wanted to raise
+awareness and also share some tweaks I made to make this smoother.</p>
+
+<p>I’ve recently come up against an interesting setup challenge. I needed to
+satisfy both requirements while teaching:</p>
+
+<ol>
+  <li>Display a keynote along with speaker notes (so display mirroring won’t
+work).</li>
+  <li>Display a terminal for demo purposes. Display mirroring would be nice
+here, so that I wouldn’t need to put the terminal on the screen behind
+me and crane my neck while I type.</li>
+</ol>
+
+<p>Point 1 is fairly straightforward, but it requires disabling display
+mirroring. So my approach (at least for now) is to accomplish point 2
+<em>without</em> display mirroring. I considered a few alternatives:</p>
+<ul>
+  <li>Just put the terminal on the projector screen and crane my neck as I
+type. This has the drawback of being bad for my neck! What a pain (in
+the neck).</li>
+  <li>This is cheating, but abandon point 1 and just do display mirroring. I
+would print out my speaker notes or have it on another device. This
+would probably work, but I don’t like having to sync up notes with
+another device. Having paper notes would probably work but it’s a little
+bit annoying to prep beforehand.</li>
+  <li>Secret option 3: do something completely different.</li>
+</ul>
+
+<h2 id="secret-option-3">Secret Option 3</h2>
+<p><a href="https://github.com/tmux/tmux/wiki">tmux</a> is a terminal multiplexer,
+which, in a nutshell, brings you the following benefits (and since I’m a
+tmux newbie, probably many more that I am not aware of):</p>
+<ul>
+  <li><strong>Open multiple terminal windows in a single session.</strong> Windows in tmux
+don’t open a new terminal window, but behave kinda like tabs.</li>
+  <li><strong>Open multiple terminal sessions within a single window.</strong> This isn’t
+super relevant here, but it’s still a nice feature. You can split a
+single window into many terminal instances.</li>
+  <li><strong>Detach and attach terminal sessions.</strong> This is where the magic
+happens! Usually, when a terminal application is quit, the terminal
+session is closed as well. <em>Detaching</em> allows you to exit a terminal
+session in tmux  without closing it.  You can return to a detached
+session by <em>attaching</em> to it.</li>
+</ul>
+
+<p>Most importantly, it’s possible to attach to a given terminal session in
+tmux multiple times. This means I can have two separate windows attached
+to one terminal, both displaying the same thing! You can probably see
+where this is going.</p>
+
+<p>To get started, I create a new tmux session and name it according to
+whatever thing I’m doing just to keep things simple:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tmux new -s demo
+</code></pre></div></div>
+
+<p>Then I open another terminal window to put on a separate screen, and
+attach to that session:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tmux attach -t demo
+</code></pre></div></div>
+
+<p>Here it is in action:</p>
+
+<p><img src="/assets/posts/mirror_terminals.gif" alt="Mirrored terminals" /></p>
+
+<p>Therefore, with not very much setup, it’s possible to get the best of both
+worlds: a projected terminal without needing to resort to display
+mirroring.</p>
+
+<p>There’s one final detail, which is that tmux windows will size themselves
+according to the minimum dimensions of attached sessions. So if one
+terminal window is bigger than the other, there will be a size mismatch.
+Usually, the projected terminal is smaller (since it’s more zoomed in), so
+the user terminal will end up with a bit less space.</p>
+
+<p><img src="/assets/posts/size_diff.png" alt="Size difference in terminals" /></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

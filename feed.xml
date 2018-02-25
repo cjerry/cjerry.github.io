@@ -5,7 +5,7 @@
   
   <link href="http://jerryjrchen.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://jerryjrchen.com/" rel="alternate" type="text/html" />
-  <updated>2018-02-22T19:34:13+00:00</updated>
+  <updated>2018-02-25T04:33:53+00:00</updated>
   <id>http://jerryjrchen.com//</id>
 
   
@@ -19,6 +19,116 @@
 
   
 
+  
+  
+    <entry>
+      
+      <title type="html">A very Pane-ful Presentation</title>
+      
+      <link href="http://jerryjrchen.com/2018/02/24/presenting/" rel="alternate" type="text/html" title="A very Pane-ful Presentation" />
+      <published>2018-02-24T00:00:00+00:00</published>
+      <updated>2018-02-24T00:00:00+00:00</updated>
+      <id>http://jerryjrchen.com/2018/02/24/presenting</id>
+      <content type="html" xml:base="http://jerryjrchen.com/2018/02/24/presenting/">&lt;p&gt;Credit for this idea goes to this &lt;a href=&quot;https://stackoverflow.com/a/30275065&quot;&gt;StackOverflow
+answer&lt;/a&gt;. I just wanted to raise
+awareness and also share some tweaks I made to make this smoother.&lt;/p&gt;
+
+&lt;p&gt;I’ve recently come up against an interesting setup challenge. I needed to
+satisfy both requirements while teaching:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Display a keynote along with speaker notes (so display mirroring won’t
+work).&lt;/li&gt;
+  &lt;li&gt;Display a terminal for demo purposes. Display mirroring would be nice
+here, so that I wouldn’t need to put the terminal on the screen behind
+me and crane my neck while I type.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Point 1 is fairly straightforward, but it requires disabling display
+mirroring. So my approach (at least for now) is to accomplish point 2
+&lt;em&gt;without&lt;/em&gt; display mirroring. I considered a few alternatives:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Just put the terminal on the projector screen and crane my neck as I
+type. This has the drawback of being bad for my neck! What a pain (in
+the neck).&lt;/li&gt;
+  &lt;li&gt;This is cheating, but abandon point 1 and just do display mirroring. I
+would print out my speaker notes or have it on another device. This
+would probably work, but I don’t like having to sync up notes with
+another device. Having paper notes would probably work but it’s a little
+bit annoying to prep beforehand.&lt;/li&gt;
+  &lt;li&gt;Secret option 3: do something completely different.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;secret-option-3&quot;&gt;Secret Option 3&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;tmux&lt;/a&gt; is a terminal multiplexer,
+which, in a nutshell, brings you the following benefits (and since I’m a
+tmux newbie, probably many more that I am not aware of):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Open multiple terminal windows in a single session.&lt;/strong&gt; Windows in tmux
+don’t open a new terminal window, but behave kinda like tabs.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open multiple terminal sessions within a single window.&lt;/strong&gt; This isn’t
+super relevant here, but it’s still a nice feature. You can split a
+single window into many terminal instances.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Detach and attach terminal sessions.&lt;/strong&gt; This is where the magic
+happens! Usually, when a terminal application is quit, the terminal
+session is closed as well. &lt;em&gt;Detaching&lt;/em&gt; allows you to exit a terminal
+session in tmux  without closing it.  You can return to a detached
+session by &lt;em&gt;attaching&lt;/em&gt; to it.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most importantly, it’s possible to attach to a given terminal session in
+tmux multiple times. This means I can have two separate windows attached
+to one terminal, both displaying the same thing! You can probably see
+where this is going.&lt;/p&gt;
+
+&lt;p&gt;To get started, I create a new tmux session and name it according to
+whatever thing I’m doing just to keep things simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tmux new -s demo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then I open another terminal window to put on a separate screen, and
+attach to that session:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tmux attach -t demo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here it is in action:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/mirror_terminals.gif&quot; alt=&quot;Mirrored terminals&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore, with not very much setup, it’s possible to get the best of both
+worlds: a projected terminal without needing to resort to display
+mirroring.&lt;/p&gt;
+
+&lt;p&gt;There’s one final detail, which is that tmux windows will size themselves
+according to the minimum dimensions of attached sessions. So if one
+terminal window is bigger than the other, there will be a size mismatch.
+Usually, the projected terminal is smaller (since it’s more zoomed in), so
+the user terminal will end up with a bit less space.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/size_diff.png&quot; alt=&quot;Size difference in terminals&quot; /&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+        <summary type="html">Credit for this idea goes to this StackOverflow answer. I just wanted to raise awareness and also share some tweaks I made to make this smoother.</summary>
+      
+
+      
+      
+    </entry>
+  
   
   
     <entry>
