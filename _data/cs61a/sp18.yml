@@ -29,12 +29,18 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc03.pdf
-  - number: 3
+  - number: 4
     description: Nonlocals & Mutation
     downloads:
       - name: Slides
         type: slides
         link: sp18/assets/disc04.pdf
+  - number: 5
+    description: Object Oriented Programming
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc05.pdf
 
 locations:
   - type: Office Hours
