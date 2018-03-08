@@ -7,6 +7,8 @@ install:
   - yarn install
 
 deploy:
+  edge:
+    branch: v1.8.47 # DPL is borked
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
