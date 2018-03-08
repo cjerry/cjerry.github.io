@@ -30,6 +30,7 @@ exclude: # Need to keep node_modules
   - Gemfile.lock
   - yarn.lock
   - package.json
+  - vendor
 
 # Build settings
 markdown: kramdown
