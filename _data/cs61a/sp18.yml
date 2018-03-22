@@ -47,6 +47,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc06.pdf
+  - number: 7
+    description: Scheme
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc07.pdf
 
 locations:
   - type: Office Hours
