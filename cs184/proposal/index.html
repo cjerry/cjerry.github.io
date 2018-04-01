@@ -83,8 +83,15 @@ different angles.</p>
 <p>There are many ways to include clouds in graphics programs, ranging in
 realism from a simple flat texture to a complex particle simulation. For
 some applications, a simple texture far in the background is sufficient.
-But in something like a real-time flight simulator, having realistic is a
-critical part of the experience.</p>
+But in something like a real-time flight simulator, having realistic
+renderings of the sky is a critical part of the experience.</p>
+
+<p>Cloud renderings differ from the surface renderings we implemented in the
+raytracer project in that clouds are made up of millions of miniscule
+particles that refract and reflect light, separated by air and suspended
+in the atmosphere. We will have to figure out a way to simulate these
+particles in real time to create the illusion that the viewer is flying
+through the clouds.</p>
 
 <p>Based on the existing literature, there exist methods to do cloud
 rendering in real time, but the most advanced techniques take advantage of
@@ -119,14 +126,17 @@ computer generated render. For rendering clouds, we will investigate and
 implement ray penetration through volume textures based on both direct and
 indirect light. Direct lighting will come from a fixed point, while the
 indirect lighting will deal mainly with light bouncing off of other
-objects.</p>
+objects, such as other clouds.</p>
 
-<p>Performance of the demo will be easier to assess. As a baseline, we hope
-that the demo is performant enough that the controls are responsive. As a
-rough estimate, this
+<p>Performance of the demo will be easier to assess. As a baseline, we hope that
+the demo is performant enough that the controls are responsive. As a rough
+estimate, this
 <a href="https://ux.stackexchange.com/questions/3830/ui-lag-whats-considered-smooth">StackExchange</a>
-response suggests that 10 FPS is a bare minimum for responsiveness. We’ll
-aim for this minimum target on a standard 2014 Macbook Pro.</p>
+response suggests that 10 FPS is a bare minimum for responsiveness. We’ll aim
+for this minimum target on a standard 2014 Macbook Pro. We will also have a
+reasonable 2 GB cap on memory usage for the WebGL implementation. This is to
+ensure we properly close off any potential memory leaks and prevent newly
+generated clouds from churning through too much memory.</p>
 
 <h3 id="stretch">Stretch</h3>
 <p>Performance wise, while something like 10 FPS is the bare minimum, we hope
@@ -141,9 +151,10 @@ showcase, given the time.</p>
   <li>The ability to travel through and below clouds. This would showcase the
 difference in appearance of clouds from below vs above.</li>
   <li>Dynamic cloud evolution.</li>
-  <li>Weather effects, like lightning and rain</li>
+  <li>Weather effects, like lightning and rain.</li>
   <li>Refraction effects from water droplets on the screen (imagine flying
-through precipitation)</li>
+through precipitation).</li>
+  <li>Lens flare that might result from facing the sun at certain angles.</li>
 </ul>
 
 <h2 id="schedule">Schedule</h2>
