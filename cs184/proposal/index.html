@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>CS 184 Spring 2018 Project Proposal</title>
+  <meta name="description" content="Jerry Chen&#39;s website">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/cs184/proposal/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="CS 184 Spring 2018 Project Proposal">
+  <meta name="twitter:description" content="Jerry Chen&#39;s website">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="cloud-simulation">Cloud Simulation</h1>
+
+<p>Team members:</p>
+<ul>
+  <li>Jerry Chen (25514439)</li>
+  <li>Harry Ho (26795844)</li>
+  <li>Tammy Nguyen (25526592)</li>
+</ul>
+
+<hr />
+
+<p><img src="/assets/cloudy.jpg" alt="" />
+By <a href="https://en.wikipedia.org/wiki/User:Muhammad_Mahdi_Karim" class="extiw" title="w:User:Muhammad Mahdi Karim">Muhammad Mahdi Karim</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html" title="GNU Free Documentation License 1.2">GFDL 1.2</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=9105111">Link</a></p>
+
+<h2 id="summary">Summary</h2>
+<p>For our project, we will use OpenGL to accurately render the appearance of
+clouds from close up in real time. Additionally, we will allow the user to
+traverse the scene to observe clouds illuminated from a variety of
+different angles.</p>
+
+<h2 id="problem-description">Problem Description</h2>
+<p>There are many ways to include clouds in graphics programs, ranging in
+realism from a simple flat texture to a complex particle simulation. For
+some applications, a simple texture far in the background is sufficient.
+But in something like a real-time flight simulator, having realistic is a
+critical part of the experience.</p>
+
+<p>Based on the existing literature, there exist methods to do cloud
+rendering in real time, but the most advanced techniques take advantage of
+GPU acceleration to achieve real time performance. Our goal is to create
+believable cloud renders in real time without relying upon expensive high
+performance hardware. This tradeoff is likely going to be the most
+challenging aspect of the project.</p>
+
+<p><a href="https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms/">This paper from
+Intel</a>
+(dynamic volumetric cloud rendering) mentions a particle method for
+simulating clouds that we would like to try in OpenGL (which does support
+parallelism). It uses “a multithread framework and Intel® Streaming SIMD
+Extensions (Intel® SSE) instructions” to achieve real time performance. On
+top of that, the method described also simulates dynamic evolution of
+clouds, which could be a feasible stretch goal.</p>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="main">Main</h3>
+<p>Our main goal is to create a believable real time demo of a scene
+featuring static clouds as well as a light source (the sun) using WebGL.
+There will also be keyboard controls that allow the user of our demo to
+traverse the scene. They will be able to fly above the clouds, seeing
+differences in appearance based on how the clouds interact with the light
+reflecting off or passing through it.</p>
+
+<p>Of course, accuracy of the clouds is going to be fairly subjective – our
+goal is to create realistic enough clouds that it takes a non-cloud expert
+at least a few seconds to discern that the image they are looking at is a
+computer generated render. For rendering clouds, we will investigate and
+implement ray penetration through volume textures based on both direct and
+indirect light. Direct lighting will come from a fixed point, while the
+indirect lighting will deal mainly with light bouncing off of other
+objects.</p>
+
+<p>Performance of the demo will be easier to assess. As a baseline, we hope
+that the demo is performant enough that the controls are responsive. As a
+rough estimate, this
+<a href="https://ux.stackexchange.com/questions/3830/ui-lag-whats-considered-smooth">StackExchange</a>
+response suggests that 10 FPS is a bare minimum for responsiveness. We’ll
+aim for this minimum target on a standard 2014 Macbook Pro.</p>
+
+<h3 id="stretch">Stretch</h3>
+<p>Performance wise, while something like 10 FPS is the bare minimum, we hope
+to achieve at least 30 FPS for our demo. Of course, this will vary
+depending on the device that the demo is run on. We would like to have
+varying volumetric renderings of clouds that change size and shape over
+time.</p>
+
+<p>There are a couple of additional graphical features we would like to
+showcase, given the time.</p>
+<ul>
+  <li>The ability to travel through and below clouds. This would showcase the
+difference in appearance of clouds from below vs above.</li>
+  <li>Dynamic cloud evolution.</li>
+  <li>Weather effects, like lightning and rain</li>
+  <li>Refraction effects from water droplets on the screen (imagine flying
+through precipitation)</li>
+</ul>
+
+<h2 id="schedule">Schedule</h2>
+<p>For the first week, we plan to setup our development environments and get
+acquainted with OpenGL. At this point, we will also conduct research into
+the feasibility of our current plan, and scope out alternative cloud
+rendering approaches.</p>
+
+<p>From there, it’s a bit difficult to estimate how much time it will take to
+complete the different parts of the project. We hope to have the static
+cloud rendering done by the checkpoint, at which point we would turn our
+attention to implementing traversal. Any remaining time after that would
+be put towards our stretch goals.</p>
+
+<h2 id="resources">Resources</h2>
+<h3 id="reference">Reference</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Resource</th>
+      <th style="text-align: left">Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://threejs.org/examples/#webgl_geometry_terrain_fog">ThreeJS example of fog and terrain</a></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Volumetric_path_tracing">Volumetric Path Tracing - Wikipedia</a></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://en.wikipedia.org/wiki/Crepuscular_rays">Crepuscular Rays - Wikipedia</a></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://www.html5code.com/gallery/mr-doob-clouds/">Clouds with WebGL demo</a></td>
+      <td style="text-align: left">This is a very basic implementation of what we want to achieve.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms/">Intel article about dynamic realtime rendering</a></td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://cseweb.ucsd.edu/~ravir/papers/singlescat/scattering.pdf">Scattering model for fog/mist paper</a></td>
+      <td style="text-align: left">Originally linked under the project ideas.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://pdfs.semanticscholar.org/a999/d556007e2782c470dd3948b91676f37b7261.pdf">Real-Time Cloud Rendering paper</a></td>
+      <td style="text-align: left">Presents a technique targeted at flight simulation and games.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://ux.stackexchange.com/questions/3830/ui-lag-whats-considered-smooth">Rough HI Guidelines from StackExchange</a></td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="compute">Compute</h3>
+<p>We have laptops, and will run WebGL on our CPUs only. After seeing other
+WebGL demos, we are optimistic that this will run with acceptable
+performance. If needed, we will use the discrete GPUs on lab computers to
+render.</p>
+
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
