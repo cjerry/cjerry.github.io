@@ -24,7 +24,7 @@ is fine. But stuff like Zsh (which I've tried) and Fish (which I haven't)
 feature many small quality-of-life tweaks that make things easier. For Zsh,
 there's the [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) framework
 that makes it really easy to extend the functionality of zsh (much like
-[configuring Vim, actually](/2017/08/22/configuration.html)).
+[configuring Vim, actually](/2017/08/22/configuration)).
 
 ### A better set of colors
 Terminal starts with a black on white color scheme. It's fine.
