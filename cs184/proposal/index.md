@@ -12,7 +12,7 @@ Team members:
 ---
 
 ![](/assets/cloudy.jpg)
-By <a href="https://en.wikipedia.org/wiki/User:Muhammad_Mahdi_Karim" class="extiw" title="w:User:Muhammad Mahdi Karim">Muhammad Mahdi Karim</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html" title="GNU Free Documentation License 1.2">GFDL 1.2</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=9105111">Link</a>
+Picture of clouds by <a href="https://en.wikipedia.org/wiki/User:Muhammad_Mahdi_Karim" class="extiw" title="w:User:Muhammad Mahdi Karim">Muhammad Mahdi Karim</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html" title="GNU Free Documentation License 1.2">GFDL 1.2</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=9105111">Link</a>
 
 ## Summary
 For our project, we will use OpenGL to accurately render the appearance of
