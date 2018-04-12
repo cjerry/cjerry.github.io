@@ -54,11 +54,17 @@ resources:
         type: slides
         link: sp18/assets/disc07.pdf
   - number: 8
-    description: Interpreters and Tail Calls
+    description: Interpreters & Tail Calls
     downloads:
       - name: Slides
         type: slides
         link: sp18/assets/disc08.pdf
+  - number: 9
+    description: Macros & Streams
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc09.pdf
 
 locations:
   - type: Office Hours
