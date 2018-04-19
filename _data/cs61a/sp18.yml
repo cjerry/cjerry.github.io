@@ -65,6 +65,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc09.pdf
+  - number: 10
+    description: SQL
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc10.pdf
 
 locations:
   - type: Office Hours
