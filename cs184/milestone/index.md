@@ -23,12 +23,13 @@ point, and then add in movement controls later. It turns out that movement
 of the camera is relatively straightforward, but cloud rendering using
 WebGL requires a bit more planning.
 
-Our initial idea was to use a light scattering model to render clouds; in
-the current checkpoint, we have demonstrated that creating such particles
-is feasible, and it interacts well with the movement controls we have so
-far. However, it will take some additional time to figure out how to we
-can apply the light scattering model since the WebGL library we are using
-doesn't seem to easily allow for it.
+Our initial idea was to use a [light scattering
+model](https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms/)
+to render clouds; in the current checkpoint, we have demonstrated that
+creating such particles is feasible, and it interacts well with the
+movement controls we have so far. However, it will take some additional
+time to figure out how to we can apply the light scattering model since
+the WebGL library we are using doesn't seem to easily allow for it.
 
 Another possibility is to try an alternate rendering approach that will be
 more friendly to our current setup. For example, projecting textures onto
