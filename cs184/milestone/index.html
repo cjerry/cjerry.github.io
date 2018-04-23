@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>CS 184 Spring 2018 Project Milestone</title>
+  <meta name="description" content="Jerry Chen&#39;s website">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/cs184/milestone/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="CS 184 Spring 2018 Project Milestone">
+  <meta name="twitter:description" content="Jerry Chen&#39;s website">
+  
+  
+
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bitter:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+  
+
+</head>
+
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="cloud-simulation-milestone">Cloud Simulation Milestone</h1>
+
+<p>Team members:</p>
+<ul>
+  <li>Jerry Chen (25514439)</li>
+  <li>Harry Ho (26795844)</li>
+  <li>Tammy Nguyen (25526592)</li>
+</ul>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>So far, we have implemented basic traversal of the scene, as well as
+adding in some sample particles to be rendered as clouds later.</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>Originally, we had planned to have some sample clouds rendered at this
+point, and then add in movement controls later. It turns out that movement
+of the camera is relatively straightforward, but cloud rendering using
+WebGL requires a bit more planning.</p>
+
+<p>Our initial idea was to use a light scattering model to render clouds; in
+the current checkpoint, we have demonstrated that creating such particles
+is feasible, and it interacts well with the movement controls we have so
+far. However, it will take some additional time to figure out how to we
+can apply the light scattering model since the WebGL library we are using
+doesn’t seem to easily allow for it.</p>
+
+<p>Another possibility is to try an alternate rendering approach that will be
+more friendly to our current setup. For example, projecting textures onto
+the scene in a way that appears realistic. It’s also feasible to use
+images of clouds as cloud “imposters” in the background of the scene,
+since they appear far enough away that interaction is not required.</p>
+
+<h2 id="next-steps">Next Steps</h2>
+<p>We plan to explore the alternate cloud rendering approaches, and hope to
+converge on one of the ideas soon.</p>
+
+<p>From there, we still need to make sure that travelling into the cloud
+layer is realistic, which could perhaps be simulated as fog.</p>
+
+<h2 id="downloads">Downloads</h2>
+<ul>
+  <li><a href="/cs184/milestone/milestone.pdf">Milestone slides</a></li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
