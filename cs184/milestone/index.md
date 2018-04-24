@@ -46,3 +46,5 @@ layer is realistic, which could perhaps be simulated as fog.
 
 ## Downloads
 - [Milestone slides](./milestone.pdf)
+- Milestone video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FIiS-2NfEUs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
