@@ -71,6 +71,12 @@ resources:
       - name: Slides
         type: slides
         link: sp18/assets/disc10.pdf
+  - number: 11
+    description: Final Review and Special Topics
+    downloads:
+      - name: Slides
+        type: slides
+        link: sp18/assets/disc11.pdf
 
 locations:
   - type: Office Hours
