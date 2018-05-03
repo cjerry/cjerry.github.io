@@ -1,0 +1,48 @@
+#container {
+    display: inline-block;
+    position: relative;
+}
+
+#canvas-stats {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#stats {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+/* FIXME: have the directions rest on top of the canvas */
+.controls_container {
+    background-color: #737373;
+    font-family:courier;
+    margin: 20px 20px;
+    opacity: 0.1;
+    padding: 5px 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250;
+    z-index: 5;
+}
+
+.controls_container:hover {
+    opacity: 0.9;
+}
+
+.controls_container p {
+    color: white;
+    opacity: 1.0;
+    z-index: 10;
+}
+
+.controls_container h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: -10px;
+}
