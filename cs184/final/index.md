@@ -8,7 +8,7 @@ title: CS 184 Spring 2018 Final Report
 <link rel="stylesheet" href="assets/css/main.css?version=1.3"/>
 
 <div id="container">
-<canvas id="maincanvas" width="640" height="480"></canvas>
+<canvas id="maincanvas"></canvas>
 <div class="controls_container">
 <p>
 Controls <br/>
@@ -38,6 +38,12 @@ button.onclick = function() {
         div.style.display = 'block';
     }
 };
+
+var canvas = document.getElementById('maincanvas');
+canvas.style.width ='100%';
+canvas.style.height = '480px';
+canvas.width  = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
 </script>
 
 <!-- vertex and fragment shader for point cloud -->
