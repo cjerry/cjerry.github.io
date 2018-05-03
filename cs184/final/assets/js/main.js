@@ -239,8 +239,8 @@ function animate() {
     // Generate/regenerate imposters based on translation threshold
     if ( cloudMaterials.length == NUM_IMPOSTER_MATERIALS && imposterClouds.size == 0 ) {
         console.log("Generating clouds");
-        //generateImposters(500, 30000, 2000, 10000, -1000);
-        generateImposters(50, 30000, 2000, 10000, -1000);
+        generateImposters(500, 30000, 2000, 10000, -1000);
+        //generateImposters(50, 30000, 2000, 10000, -1000);
     } else if ( cloudMaterials.length == NUM_IMPOSTER_MATERIALS ) {
         //imposterClouds.forEach(checkAndRegenerateImposter);
 
@@ -252,8 +252,8 @@ function animate() {
 
     // Generate imposters as user goes deeper
     if (camera.position.z < regeneratePosition) {
-        //generateImposters(100, 30000, 2000, 10000, camera.position.z - 6000);
-        generateImposters(10, 30000, 2000, 10000, camera.position.z - 6000);
+        generateImposters(100, 30000, 2000, 10000, camera.position.z - 6000);
+        //generateImposters(10, 30000, 2000, 10000, camera.position.z - 6000);
         regeneratePosition = camera.position.z - 4000;
     }
 
