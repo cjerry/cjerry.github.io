@@ -79,129 +79,57 @@ void main() {
 <script src="assets/js/main.js?version=1.4"></script>
 
 ## Summary
-For our project, we will use OpenGL to accurately render the appearance of
-clouds from close up in real time. Additionally, we will allow the user to
+
+For our project, we used OpenGL to accurately render the appearance of
+clouds from close up in real time. Additionally, we allow the user to
 traverse the scene to observe clouds illuminated from a variety of
-different angles.
+different angles. This is achieved through the careful use of cloud textures placed in the scene, which dynamically generate based on the current camera position. Finally, the entire simulation can run on a web browser, sustaining well above 30 fps for a 640x480 window.
+
 
 ## Technical Approach
+Unlike meshes that we were rendering in project 3, clouds are a semi-transparent collection of particles made up of suspended gaseous materials. This means that light can penetrate through a cloud, is scattered and absorbed depending on its particles, and moves dynamically with relation to its surrounding particles and external forces.
+
+During the research process, we investigated two ways of dynamically rendering clouds. The one we implemented for this project was the use of imposters, which are cloud textures placed throughout the scene. This is an effective way to create clouds without needing to resort to complex computation. However, there are still challenges associated with this.
+
+After the user passes through the initial clouds, there will be no more clouds to look at. This is not a problem for a static scene, but in our project, we allow the user to freely travel. We solve this problem by keeping track of the user position and the distance towards which we have generated clouds. As the user enters unvisited territory, we generate additional clouds.
+
+Viewing angles for cloud imposters also pose a challenge. As the user moves, it becomes challenging to provide a consistent view of the cloud. This is less of an issue for simple rotation (i.e. rolling) which we are able to handle by looking at the rotation of the camera along the z-axis. Hoever, if the user changes their angle of view of the cloud, the cloud may appear to rotate unnaturally to follow the user's gaze. [This paper on real-time cloud rendering](https://pdfs.semanticscholar.org/a999/d556007e2782c470dd3948b91676f37b7261.pdf) describes a technique for determining a translation error metric which we could use to get a measure of error per cloud. Once the cloud exceeds a certain error threshold, it would be regenerated. Due to time limitations, we were not able to implement this in time, but we believe that the current demo behaves very well when traveling along the default starting direction.
+
+Other aspects of the scene have been added through the three.js library.
+* Lighting was done using a three.js hemisphere light. The sun was simulated as a far away mesh.
+* Sky and the horizon were added [using a custom sky shader](https://threejs.org/examples/webgl_shaders_sky.html)
+* Movement controls were added using [FlyControls](https://threejs.org/examples/misc_controls_fly.html), a three.js module
+* The plane mesh was found [here](https://clara.io/view/4446a747-cbc4-4485-bc76-985a32e80251) and is in the public domain
+
+
+[This paper from Intel](https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms) (dynamic volumetric cloud rendering) mentions a particle method for simulating clouds that we tried in OpenGL (which does support parallelism). It uses "a multithread framework and Intel® Streaming SIMD Extensions (Intel® SSE) instructions" to achieve real time performance. On top of that, the method described also simulates dynamic evolution of clouds, which could be a feasible stretch goal.
+However, as we continued using raymarching under shaders with individual point meshes to simulate cloud particles, we found that our threshold for memory and computation was too hard to handle. Most articles either involved lengthy time renders for clouds, or using a mix of mesh and shaders to model a cloud appearance when viewed from below. We intended to use shaders to simulate flying up, down, and between clouds. Other implementations, like the Intel paper referenced above, involved tampering with SIMD instructions and their own GPU programming to speed up calculations; we had Three.js.
+The intended idea was to use raymarching in shaders to simulate how clouds would look. In short, we sample a cloud by building up an alpha channel and calculating lighting as we iterate through the cloud from the camera’s perspective. We also need to account for scattering of light within the cloud, from other clouds, and also along the cloud to create the “silver-lining” effect. We also need to account for light absorption with an albedo weight. This seems like a trivial matter, but to account for all this, at each march, we need to account for every particle’s interaction with each other in the cloud.
+One approach involved adding a matrix to each fragment shader input that represents each point’s properties in the cloud, but since Three.js runs on the browser, we have finite memory to work with, and realistic simulations would throw a memory leak error. On top of this and having a broken display halfway through the project, the implementation that involved using particle-by-particle cloud simulation ended up being infeasible given the time constraint. As a result, we plan to implement this under next time, provided that the motivation still exists.
+
+Final lessons we learned:
+* WebGL (and by extension, OpenGL) is an incredibly powerful graphics API. However, we quickly learned that building something from scratch would be quite time consuming. The use of libraries like three.js greatly accelerated our progress.
+* We were lucky that our problem could be easily scaled: i.e. number of clouds could be adjusted. This meant that we had a reasonable way of tuning performance without needing to compromise on our core solution.
 
 ## Results
 
+Although performance depends largely on what kind of device you run the demo, we have observed a steady >30 fps performance on a reasonably modern laptop (i.e. Macbook Pro 2014). It's also possible to tweak simulation parameters, such as lowering the number of clouds or lowering the travel speed, to improve the performance.
+
+You can try out a demo at the top of the page. Final report video:
+
 ## References
+
+* Dynamic volumetric cloud rendering: <https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms>
+* Real-Time Cloud Rendering: <https://pdfs.semanticscholar.org/a999/d556007e2782c470dd3948b91676f37b7261.pdf>
+* Plane mesh: <https://clara.io/view/4446a747-cbc4-4485-bc76-985a32e80251>
+* Custom sky/sun shader: <https://threejs.org/examples/webgl_shaders_sky.html>
+* Flight controls: <https://threejs.org/examples/misc_controls_fly.html>
+* Volumetric Cloudscapes: <http://killzone.dl.playstation.net/killzone/horizonzerodawn/presentations/Siggraph15_Schneider_Real-Time_Volumetric_Cloudscapes_of_Horizon_Zero_Dawn.pdf>
 
 ## Contributions from each team member
 
+All group members contributed to the initial brainstorming and planning process.
 
-# Old
+Jerry created all the non-cloud portions of the scene, helped debug some of the imposter viewing angle issues, and prepared the proposal and checkpoint writeups.
 
-
-## Problem Description
-There are many ways to include clouds in graphics programs, ranging in
-realism from a simple flat texture to a complex particle simulation. For
-some applications, a simple texture far in the background is sufficient.
-But in something like a real-time flight simulator, having realistic
-renderings of the sky is a critical part of the experience.
-
-Cloud renderings differ from the surface renderings we implemented in the
-raytracer project in that clouds are made up of millions of miniscule
-particles that refract and reflect light, separated by air and suspended
-in the atmosphere. We will have to figure out a way to simulate these
-particles in real time to create the illusion that the viewer is flying
-through the clouds.
-
-Based on the existing literature, there exist methods to do cloud
-rendering in real time, but the most advanced techniques take advantage of
-GPU acceleration to achieve real time performance. Our goal is to create
-believable cloud renders in real time without relying upon expensive high
-performance hardware. This tradeoff is likely going to be the most
-challenging aspect of the project.
-
-[This paper from
-Intel](https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms/)
-(dynamic volumetric cloud rendering) mentions a particle method for
-simulating clouds that we would like to try in OpenGL (which does support
-        parallelism). It uses "a multithread framework and Intel® Streaming SIMD
-Extensions (Intel® SSE) instructions" to achieve real time performance. On
-top of that, the method described also simulates dynamic evolution of
-clouds, which could be a feasible stretch goal.
-
-## Goals
-
-### Main
-Our main goal is to create a believable real time demo of a scene
-featuring static clouds as well as a light source (the sun) using WebGL.
-There will also be keyboard controls that allow the user of our demo to
-traverse the scene. They will be able to fly above the clouds, seeing
-differences in appearance based on how the clouds interact with the light
-reflecting off or passing through it.
-
-Of course, accuracy of the clouds is going to be fairly subjective -- our
-goal is to create realistic enough clouds that it takes a non-cloud expert
-at least a few seconds to discern that the image they are looking at is a
-computer generated render. For rendering clouds, we will investigate and
-implement ray penetration through volume textures based on both direct and
-indirect light. Direct lighting will come from a fixed point, while the
-indirect lighting will deal mainly with light bouncing off of other
-objects, such as other clouds.
-
-Performance of the demo will be easier to assess. As a baseline, we hope that
-the demo is performant enough that the controls are responsive. As a rough
-estimate, this
-[StackExchange](https://ux.stackexchange.com/questions/3830/ui-lag-whats-considered-smooth)
-response suggests that 10 FPS is a bare minimum for responsiveness. We'll aim
-for this minimum target on a standard 2014 Macbook Pro. We will also have a
-reasonable 2 GB cap on memory usage for the WebGL implementation. This is to
-ensure we properly close off any potential memory leaks and prevent newly
-generated clouds from churning through too much memory.
-
-### Stretch
-Performance wise, while something like 10 FPS is the bare minimum, we hope
-to achieve at least 30 FPS for our demo. Of course, this will vary
-depending on the device that the demo is run on. We would like to have
-varying volumetric renderings of clouds that change size and shape over
-time.
-
-There are a couple of additional graphical features we would like to
-showcase, given the time.
-* The ability to travel through and below clouds. This would showcase the
-difference in appearance of clouds from below vs above.
-* Dynamic cloud evolution.
-* Weather effects, like lightning and rain.
-* Refraction effects from water droplets on the screen (imagine flying
-        through precipitation).
-* Lens flare that might result from facing the sun at certain angles.
-
-
-## Schedule
-For the first week, we plan to setup our development environments and get
-acquainted with OpenGL. At this point, we will also conduct research into
-the feasibility of our current plan, and scope out alternative cloud
-rendering approaches.
-
-From there, it's a bit difficult to estimate how much time it will take to
-complete the different parts of the project. We hope to have the static
-cloud rendering done by the checkpoint, at which point we would turn our
-attention to implementing traversal. Any remaining time after that would
-be put towards our stretch goals.
-
-## Resources
-### Reference
-
-| Resource | Notes |
-| :-- | :-- |
-| [ThreeJS example of fog and terrain](https://threejs.org/examples/#webgl_geometry_terrain_fog) | |
-| [Volumetric Path Tracing - Wikipedia](https://en.wikipedia.org/wiki/Volumetric_path_tracing) | |
-| [Crepuscular Rays - Wikipedia](https://en.wikipedia.org/wiki/Crepuscular_rays) | |
-| [Clouds with WebGL demo](http://www.html5code.com/gallery/mr-doob-clouds/)| This is a very basic implementation of what we want to achieve.
-| [Intel article about dynamic realtime rendering](https://software.intel.com/en-us/articles/dynamic-volumetric-cloud-rendering-for-games-on-multi-core-platforms/) |
-| [Scattering model for fog/mist paper](https://cseweb.ucsd.edu/~ravir/papers/singlescat/scattering.pdf) | Originally linked under the project ideas. |
-| [Real-Time Cloud Rendering paper](https://pdfs.semanticscholar.org/a999/d556007e2782c470dd3948b91676f37b7261.pdf) | Presents a technique targeted at flight simulation and games. |
-| [Rough HI Guidelines from StackExchange](https://ux.stackexchange.com/questions/3830/ui-lag-whats-considered-smooth ) ||
-
-### Compute
-We have laptops, and will run WebGL on our CPUs only. After seeing other
-WebGL demos, we are optimistic that this will run with acceptable
-performance. If needed, we will use the discrete GPUs on lab computers to
-render.
-
+Harry researched and attempted to find a way to shade point clouds to simulate cloud particles. Also, he added some cool lensflare to the sun.
