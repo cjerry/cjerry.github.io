@@ -141,3 +141,5 @@ All group members contributed to the initial brainstorming and planning process.
 Jerry created all the non-cloud portions of the scene, helped debug some of the imposter viewing angle issues, and prepared the proposal and checkpoint writeups.
 
 Harry researched and attempted to find a way to shade point clouds to simulate cloud particles. Also, he added some cool lensflare to the sun.
+
+Tammy successfully implemented dynamic generation of imposter clouds based on depth, attempted to implement dynamic regeneration based on translation angle, and made the milestone and final videos.
