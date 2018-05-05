@@ -123,6 +123,7 @@ Final lessons we learned:
 Although performance depends largely on what kind of device you run the demo, we have observed a steady >30 fps performance on a reasonably modern laptop (i.e. Macbook Pro 2014). It's also possible to tweak simulation parameters, such as lowering the number of clouds or lowering the travel speed, to improve the performance.
 
 You can try out a demo at the top of the page. Final report video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z8-rap6ZWTw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## References
 
