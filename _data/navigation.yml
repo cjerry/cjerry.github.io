@@ -5,5 +5,3 @@ main:
     url: /
   - title: "Posts"
     url: /posts/
-  - title: "CS 61A"
-    url: /cs61a/
