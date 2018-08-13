@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <generator uri="http://jekyllrb.com" version="3.6.2">Jekyll</generator>
+  <generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
   
   
   <link href="http://jerryjrchen.com/feed.xml" rel="self" type="application/atom+xml" />
   <link href="http://jerryjrchen.com/" rel="alternate" type="text/html" />
-  <updated>2018-08-13T23:25:03+00:00</updated>
+  <updated>2018-08-13T23:50:43+00:00</updated>
   <id>http://jerryjrchen.com//</id>
 
   
@@ -25,7 +25,9 @@
       
       <title type="html">To my CS 61A students, past and present</title>
       
+      
       <link href="http://jerryjrchen.com/2018/04/28/goodbye/" rel="alternate" type="text/html" title="To my CS 61A students, past and present" />
+      
       <published>2018-04-28T00:00:00+00:00</published>
       <updated>2018-04-28T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2018/04/28/goodbye</id>
@@ -102,7 +104,9 @@ involved with teaching.&lt;/p&gt;
       
       <title type="html">A very Pane-ful Presentation</title>
       
+      
       <link href="http://jerryjrchen.com/2018/02/24/presenting/" rel="alternate" type="text/html" title="A very Pane-ful Presentation" />
+      
       <published>2018-02-24T00:00:00+00:00</published>
       <updated>2018-02-24T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2018/02/24/presenting</id>
@@ -212,7 +216,9 @@ the user terminal will end up with a bit less space.&lt;/p&gt;
       
       <title type="html">Redesign - A Postmortem</title>
       
+      
       <link href="http://jerryjrchen.com/2018/01/12/redesign/" rel="alternate" type="text/html" title="Redesign - A Postmortem" />
+      
       <published>2018-01-12T00:00:00+00:00</published>
       <updated>2018-01-12T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2018/01/12/redesign</id>
@@ -320,7 +326,9 @@ future me in case I ran into these issues again.&lt;/li&gt;
       
       <title type="html">Redesign - A Postmortem</title>
       
+      
       <link href="http://jerryjrchen.com/2018/01/11/redesign/" rel="alternate" type="text/html" title="Redesign - A Postmortem" />
+      
       <published>2018-01-11T00:00:00+00:00</published>
       <updated>2018-01-11T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2018/01/11/redesign</id>
@@ -520,7 +528,10 @@ pages?&lt;/p&gt;</content>
       
       <title type="html">Development Setup →</title>
       
-      <link href="http://jerryjrchen.com/2018/01/10/setup/" rel="alternate" type="text/html" title="Development Setup" />
+      
+      <link href="/cs61a/setup/" rel="alternate" type="text/html" />
+      <link href="http://jerryjrchen.com/2018/01/10/setup/" rel="related" type="text/html" title="Development Setup" />
+      
       <published>2018-01-10T00:00:00+00:00</published>
       <updated>2018-01-10T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2018/01/10/setup</id>
@@ -552,7 +563,9 @@ pages?&lt;/p&gt;</content>
       
       <title type="html">Nit-picks</title>
       
+      
       <link href="http://jerryjrchen.com/2017/09/10/nitpicks/" rel="alternate" type="text/html" title="Nit-picks" />
+      
       <published>2017-09-10T00:00:00+00:00</published>
       <updated>2017-09-10T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2017/09/10/nitpicks</id>
@@ -597,7 +610,9 @@ people confuse the two. I dream of a world where I can confidently just say
       
       <title type="html">Configuration, part 2</title>
       
+      
       <link href="http://jerryjrchen.com/2017/08/23/configuration/" rel="alternate" type="text/html" title="Configuration, part 2" />
+      
       <published>2017-08-23T00:00:00+00:00</published>
       <updated>2017-08-23T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2017/08/23/configuration</id>
@@ -657,7 +672,9 @@ couple.&lt;/p&gt;</content>
       
       <title type="html">Configuration, part 1</title>
       
+      
       <link href="http://jerryjrchen.com/2017/08/22/configuration/" rel="alternate" type="text/html" title="Configuration, part 1" />
+      
       <published>2017-08-22T00:00:00+00:00</published>
       <updated>2017-08-22T00:00:00+00:00</updated>
       <id>http://jerryjrchen.com/2017/08/22/configuration</id>
