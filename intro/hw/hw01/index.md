@@ -3,7 +3,7 @@ layout: minimal
 title: Homework 1
 ---
 
-# Homework 1 <a class="btn btn-default" href="../../assets/hw01.zip" role="button"><i class="fa fa-file-archive-o"></i> Download</a>
+# Homework 1 <a class="btn btn-default" href="hw01.zip" role="button"><i class="fa fa-file-archive-o"></i> Download</a>
 
 Please click the link at the top of the page to download. The included
 `shakespeare.txt` file included within is the one I used for the in-class
