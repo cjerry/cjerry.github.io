@@ -1,10 +1,10 @@
 resources:
   - number: 1
-    description: Introduction
+    description: Introduction, Expressions, and Statements
     downloads:
       - name: Slides
         link: assets/day01.pdf
       - name: Notes
         link: assets/note01.pdf
       - name: HW
-        link: assets/hw01.zip
+        link: hw/hw01
