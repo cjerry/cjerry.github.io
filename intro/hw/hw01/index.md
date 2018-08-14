@@ -10,7 +10,8 @@ Please click the link at the top of the page to download. The included
 demo. It's not part of the assignment.
 
 ## Part 1
-Go through the following pages on the [Learn Python](learnpython.org) tutorial:
+Go through the following pages on the [Learn
+Python](https://www.learnpython.org) tutorial:
 *  [Hello, World!](https://www.learnpython.org/en/Hello%2C_World%21)
 *  [Variables and Types](https://www.learnpython.org/en/Variables_and_Types)
 *  [Lists](https://www.learnpython.org/en/Lists)
