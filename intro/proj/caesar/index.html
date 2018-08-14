@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Caesar Cipher</title>
+  <meta name="description" content="Jerry Chen&#39;s website">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://jerryjrchen.com/intro/proj/caesar/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="jerryjrchen" href="http://jerryjrchen.com/feed.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Caesar Cipher">
+  <meta name="twitter:description" content="Jerry Chen&#39;s website">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  
+
+</head>
+
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="caesar-cipher--download">Caesar Cipher <a class="btn btn-default" href="../../assets/caesar.zip" role="button"><i class="fa fa-file-archive-o"></i> Download</a></h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a> is named
+after Julius Caesar, who used it to encrypt his secret communications.  It’s a
+type of substitution cipher where every letter is shifted a fixed number of
+positions down the alphabet to produce the encrypted result.</p>
+
+<p>Your challenge is to implement the Caesar cipher in Python! Fill in the
+code so that we can both encode <strong>and</strong> decode text. All code you need to
+edit is located in caesar.py.</p>
+
+<h2 id="examples">Examples</h2>
+<p>For example, with a right shift of 3, the letter ‘a’ is replaced with ‘d’, ‘m’
+is replaced with ‘p’, and so on.</p>
+
+<p>If we encrypted the following message with a right shift of 4:</p>
+
+<p><strong>“Julius Caesar”</strong></p>
+
+<p>It would come out as:</p>
+
+<p><strong>“Nypmyw Geiwev”</strong></p>
+
+<p>Which looks like gibberish to the untrained eye.  If you want to try some
+examples out yourself, here’s an <a href="http://www.xarg.org/tools/caesar-cipher/">online Caesar encoder/decoder</a>.</p>
+
+<h2 id="additional-details">Additional Details</h2>
+<ul>
+  <li>It’s recommended to fill in the functions from top to bottom:
+    <ul>
+      <li><code class="highlighter-rouge">shift_letter</code></li>
+      <li><code class="highlighter-rouge">caesar_encode</code></li>
+      <li><code class="highlighter-rouge">caesar_decode</code></li>
+    </ul>
+  </li>
+  <li>Test each function as you finish it! It’s easier to fix bugs if you easily
+pinpoint their location.</li>
+  <li>There is a hint in the docstring for <code class="highlighter-rouge">shift_letter</code> if you need help
+figuring it out.</li>
+  <li>Assume that your inputs will not require any wrapping. This means that you
+will not get an input of ‘y’ with a right shift of 2 (going to ‘a’). As a
+<em>bonus challenge</em>, you may implement this behavior.</li>
+</ul>
+
+<h2 id="testing">Testing</h2>
+<p>Run the doctests to check your work by doing <code class="highlighter-rouge">python3 -m doctest
+caesar.py</code>.</p>
+
+<p>Once you’ve passed all the tests, you can either call the functions
+yourself from the interpreter or run <code class="highlighter-rouge">cipher.py</code>.</p>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+&copy; Jerry Chen.
+<a href="https://jekyllrb.com">Jekyll</a> +
+<a href="https://github.com/yous/whiteglass">whiteglass</a>,
+and hosted by <a href="https://github.com/jerryjrchen/jerryjrchen.github.io">GitHub Pages</a>.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
