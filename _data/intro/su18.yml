@@ -8,3 +8,10 @@ resources:
         link: assets/note01.pdf
       - name: HW
         link: hw/hw01
+  - number: 2
+    description: HTML
+    downloads:
+      - name: Notes
+        link: assets/note02.pdf
+      - name: HW
+        link: hw/hw02
