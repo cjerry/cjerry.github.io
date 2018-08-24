@@ -15,3 +15,10 @@ resources:
         link: assets/note02.pdf
       - name: HW
         link: hw/hw02
+  - number: 3
+    description: CSS
+    downloads:
+      - name: Notes
+        link: assets/note03.pdf
+      - name: HW
+        link: hw/hw03
