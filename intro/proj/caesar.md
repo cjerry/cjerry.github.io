@@ -31,7 +31,7 @@ Which looks like gibberish to the untrained eye.  If you want to try some
 examples out yourself, here's an [online Caesar encoder/decoder](http://www.xarg.org/tools/caesar-cipher/).
 
 ## Additional Details
-* It's recommended to fill in the functions from top to bottom:
+* It's recommended that you fill in the functions from top to bottom:
   * `shift_letter`
   * `caesar_encode`
   * `caesar_decode`

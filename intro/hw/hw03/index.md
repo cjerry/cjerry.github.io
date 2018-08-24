@@ -17,7 +17,7 @@ Use CSS to stylize your page. I'd recommend making a separate CSS file and then 
 
 > Webkit is only supported by Safari and Chrome. If you're not using
 > Safari or Chrome, [you will need a different CSS
-> prefix](*https://stackoverflow.com/a/3468311).
+> prefix](https://stackoverflow.com/a/3468311).
 
 ## Bootstrap
 Create a new webpage for this part of the homework.
