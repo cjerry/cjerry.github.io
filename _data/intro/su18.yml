@@ -22,3 +22,14 @@ resources:
         link: assets/note03.pdf
       - name: HW
         link: hw/hw03
+  - number: 4
+    description: Control
+    downloads:
+      - name: Slides
+        link: assets/day04.pdf
+      - name: Notes
+        link: assets/note04.pdf
+      - name: HW
+        link: hw/hw04
+      - name: Project
+        link: proj/caesar

@@ -13,7 +13,9 @@ positions down the alphabet to produce the encrypted result.
 
 Your challenge is to implement the Caesar cipher in Python! Fill in the
 code so that we can both encode **and** decode text. All code you need to
-edit is located in caesar.py.
+edit is located in `caesar.py.`
+
+> You do not need to read or understand the contents of `cipher.py`.
 
 ## Examples
 For example, with a right shift of 3, the letter 'a' is replaced with 'd', 'm'
